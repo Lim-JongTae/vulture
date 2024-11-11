@@ -1,0 +1,127 @@
+<template>
+  <div class="blog-wrapper shadow04" :class="{ 'no-user': !user }">
+    <div class="blog-content">
+        <div class=" whitespace-pre-wrap">          
+            <h2 v-if="post.welcomeScreen" class="roboto-font">{{ post.title }}</h2>            
+            <h2 v-else class="jua-font">{{ post.blogTitle }}</h2>
+            <p v-if="post.welcomeScreen" class="notossans-font">{{ post.blogPost}}</p>            
+            <p class="content-preview font-extrabold" v-else v-html="post.blogHTML"></p>
+            <NuxtLink class="link link-light font-bold" v-if="post.welcomeScreen" to="/auth/login">로그인/회원가입
+              <UIcon name="i-heroicons-arrow-long-right-16-solid" class="w-7 h-7 ml-2 dark:invert arrow"/>
+            </NuxtLink>            
+           <!-- <NuxtLink class="link" v-else :to="{ name: '/views/viewBlog:id', params: { blogid: post.blogId} }"> -->
+           <NuxtLink class="link" v-else :to="`/detailBlog/${post.id}`">
+              게시물 보기
+           </NuxtLink>                                        
+          </div>
+        </div>
+        <div class="blog-photo">
+          <NuxtImg class="img" v-if="post.welcomeScreen" :src="`/blogPhotos/${post.photo}.jpg`" alt="Welcome Image" />
+          <NuxtImg class="img" v-else :src="`/blogPhotos/${post.blogCoverPhoto}.jpg`" alt="CoverPhoto" />                        
+        </div>
+  </div>
+</template>
+
+<script setup>
+const props = defineProps({
+  post: Object
+})
+const { pId } = useUsersStore()
+</script>
+<style scoped>
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 4;
+  order: 2;  
+}
+
+.blog-wrapper:nth-child(even) {
+  .blog-content {
+    order: 2;
+  }  
+}
+.blog-wrapper:nth-child(even) {
+  .blog-photo {
+    order: 1;
+  }
+}
+div {
+  @apply max-w-[100vw] py-20 px-6
+}
+h2 {
+  @apply text-2xl font-semibold mt-1 mb-16
+}
+p {
+  @apply text-lg font-light leading-10 min-h-12 h-auto
+}
+.content-preview {
+  @apply text-sm max-h-6 w-64 whitespace-nowrap overflow-hidden text-ellipsis
+}
+.link {
+  @apply inline-flex items-center mt-4 pb-1 border border-solid 
+    border-transparent delay-100 ease-in transition-all
+     hover:border-b-slate-500
+}
+.link-light {
+  @apply hover:border-b-slate-500
+}
+.blog-photo {
+  @apply order-1 flex-[3] w-full
+}
+.img {
+  @apply block h-full w-full object-cover ml-14
+}
+.no-user:first-child {
+  @apply bg-gray-600 text-white  
+}
+
+/* start media */
+@media screen and (max-width: 699px) {
+  div {
+    padding-bottom: 20px;
+  } 
+  .blog-content {
+    @apply p-0
+  }
+  .img {
+    @apply ml-0
+  }
+}
+@media screen and (min-width: 700px) {
+  .blog-content{
+    order:1;
+  }
+  div {
+    padding: 0 24px;
+  }
+  h2 {
+    font-size: 40px;   
+  }
+  .blog-wrapper {
+    @apply min-h-[50vh] max-h-[100vh] flex-row    
+  }
+  .blog-photo {
+    order: 2;
+  }  
+}
+
+@media screen and (min-width: 800px) {
+  .blog-content{
+    flex:3;
+  }
+  .blog-photo {
+    flex: 4;
+  }
+}
+</style>
+
