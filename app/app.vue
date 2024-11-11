@@ -19,18 +19,7 @@ const { pAdmin, pEmail, pdisplayName } = storeToRefs(useStore)
 // useStore.getUser()
 const { $auth } = useNuxtApp()
 // onMounted(async () => {
-//   const email = 'test1@test.com'
-//   const password = '123456'
-//   const credentials = await createUser(email, password)
-//   console.log('Credentials:', credentials)
 
-//   const email = 'test1@test.com'
-//   const password = '123456'
-//   const credentials = await signInUser(email, password)
-//   console.log('Credentials:', credentials)
-//   const result = await signOutUse()
-//   console.log('result:', result)
-// })
 // onBeforeMount(() => {
 //   $auth.onAuthStateChanged(async(user) => {
 //     useStore.adminUpdate(user)
