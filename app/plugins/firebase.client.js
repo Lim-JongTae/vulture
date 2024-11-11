@@ -6,7 +6,7 @@ import { getFunctions } from "firebase/functions";
 
 
 
-export default defineNuxtPlugin((nuxtApp) => {  
+
   
  
  
