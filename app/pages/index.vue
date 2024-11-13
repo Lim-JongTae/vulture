@@ -1,7 +1,11 @@
 <template>
-  <div>    
-    <BlogPost :post="welcomeScreen" />    
-    <BlogPost :post="post" v-for="(post, index) in sampleBlogPost" :key="index" />     
+  <div class="home">     
+    <BlogPost :post="welcomeScreen" />        
+    <BlogPost :post="post" v-for="(post, index) in sampleBlogPost" :key="index" />        
+    
+    <div class="mt-3">
+      <AppCarousel />       
+    </div>
     <div class="blog-card-wrap">
       <div class="container">
         <h3>View More Recent Blogs</h3>
@@ -9,7 +13,8 @@
           <BlogCard :post="post" v-for="(post, index) in blogPostsCards" :key="index" />
         </div>
       </div>
-    </div> 
+    </div>      
+           
     <div class="updates h-[300px] md:h-[250px] sm:h-[150px]">     
       <div class="container flex justify-between items-center">  
         <h2 class="jua-font">다음세대를 위한 생물다양성 보존과 생태계 복원<br><br> 시민여러분과 함께 이루어 갑니다</h2>        

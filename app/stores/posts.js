@@ -62,6 +62,16 @@ export const usePostStore = defineStore('postStore', {
         blogHTML: "한반도 독수리 보전을 위한 네트워크 구축<br>울산, 철원, 파주, 경남 고성, 김해",
         blogCoverPhoto: "metting"
       },
+    ],
+    items : [
+      'blogCards/stock-1.jpg',
+      'blogCards/stock-2.jpg',
+      'blogCards/stock-3.jpg',
+      // '/movie/fly.mp4',
+      // '/movie/food_1.mp4',
+      // '/movie/food_2.mp4',
+      // '/movie/food_3.mp4' 
+         
     ]  
    }
 ),

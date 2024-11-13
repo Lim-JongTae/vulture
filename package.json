@@ -16,12 +16,13 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/dotenv": "^1.4.2",
-    "@pinia/nuxt": "^0.5.5",
+    "@pinia/nuxt": "^0.5.5",   
     "@vueup/vue-quill": "^1.2.0",
     "dotenv": "^16.4.5",
     "firebase": "^11.0.1",
     "nuxt": "^3.13.0",
-    "nuxt-mdi": "^2.1.1",
+    "nuxt-mdi": "^2.1.1",    
+    "or": "^0.2.0",
     "pinia": "^2.2.4",
     "quill": "^2.0.2",
     "quill-image-resize": "^3.0.9",
@@ -29,5 +30,8 @@
     "vue": "latest",
     "vue-router": "latest",
     "vuex": "^4.0.2"
-  }  
+  },
+  "overrides": {
+    "vue": "latest"
+  }
 }

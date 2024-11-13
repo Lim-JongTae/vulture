@@ -1,23 +1,23 @@
 <template>
 	<main>
-      <section class="parallax">
-        <img src="../assets/parallax/hill1.png" id="hill1" alt="">
-        <img src="../assets/parallax/hill2.png" id="hill2" alt="">
-        <img src="../assets/parallax/hill3.png" id="hill3" alt="">
-        <img src="../assets/parallax/mark/2.png" id="text22" alt="">
-        <img src="../assets/parallax/hill4.png" id="hill4" alt="">
-        <img src="../assets/parallax/mark/5.png" id="text11" alt="">
-        <img src="../assets/parallax/mark/4.png" id="text23" alt="">
-        <img src="../assets/parallax/mark/3.png" id="text12" alt="">
-        <img src="../assets/parallax/hill5.png" id="hill5" alt="">
-        <img src="../assets/parallax/tree.png" id="tree" alt="">
-        <!-- <h2 id="text"> 다음세대를 위한 시민행동<br><span id="text-sub">다음세대를 위한 지속가능한 발전 녹색에너지운동이 함께 합니다🌐 -->
-        <h2 id="text"> 다음세대를 위한 시민행동</h2>
-        <p id="text2">다음세대를 위한 지속가능한 발전 녹색에너지운동이 함께 합니다💚</p>
-        <img src="../assets/parallax/leaf.png" id="leaf" alt="">      
-        <img src="../assets/parallax/mark/1.png" id="text13" alt="">
+    <section class="parallax">
+      <img src="../assets/parallax/hill1.png" id="hill1" alt="">
+      <img src="../assets/parallax/hill2.png" id="hill2" alt="">
+      <img src="../assets/parallax/hill3.png" id="hill3" alt="">
+      <img src="../assets/parallax/mark/2.png" id="text22" alt="">
+      <img src="../assets/parallax/hill4.png" id="hill4" alt="">
+      <img src="../assets/parallax/mark/5.png" id="text11" alt="">
+      <img src="../assets/parallax/mark/4.png" id="text23" alt="">
+      <img src="../assets/parallax/mark/3.png" id="text12" alt="">
+      <img src="../assets/parallax/hill5.png" id="hill5" alt="">
+      <img src="../assets/parallax/tree.png" id="tree" alt="">
+      <!-- <h2 id="text"> 다음세대를 위한 시민행동<br><span id="text-sub">다음세대를 위한 지속가능한 발전 녹색에너지운동이 함께 합니다🌐 -->
+      <h2 id="text"> 다음세대를 위한 시민행동</h2>
+      <p id="text2">다음세대를 위한 지속가능한 발전 녹색에너지운동이 함께 합니다💚</p>
+      <img src="../assets/parallax/leaf.png" id="leaf" alt="">      
+      <img src="../assets/parallax/mark/1.png" id="text13" alt="">
         <img src="../assets/parallax/plant.png" id="plant" alt="">
-  </section>
+    </section>
   <section class="sec">
     <h2>당신은 이미 지구시민사회의 일원입니다<span class="spin"></span><a href="https://forms.gle/7xDbQaVxUeuQAEKW9" target="_blank"><button class="btn1">후원하기</button></a></h2>
     <ul>
