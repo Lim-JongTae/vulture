@@ -15,7 +15,10 @@ export const useGetCardStore = defineStore('cardStore', () => {
   function filterBlogPost(id) {
     blogPosts.value = blogPosts.value.filter((post) => post.blogID !== id)
   }
-
+  const updatePost = async (payload) => {
+    filterBlogPost(payload)
+    await getPost()
+  }
   const getPost = async () => {
     const { $db } = useNuxtApp();
     try {               
@@ -55,6 +58,33 @@ export const useGetCardStore = defineStore('cardStore', () => {
     await deleteDoc(docRef)
     filterBlogPost(id)
   }
+  const setBlogState = (payload) => {    
+    blogTitle.value = payload.blogTitle,
+    blogHTML.value = payload.blogHTML,
+    blogPhotoFileURL.value = payload.blogCoverPhoto,
+    blogPhotoName.value = payload.blogCoverPhotoName
+  }
+  function updateBlogTitle(payload) {
+    blogTitle.value = payload
+  }
+  function newBlogPost(body) {
+    blogHTML.value = body   
+  }
+  function fileNameChange(payload) {
+    blogPhotoName.value = payload    
+  }
+  function createFileURL(payload) {
+    blogPhotoFileURL.value = payload
+    console.log('file url',this.blogPhotoFileURL)
+  }
+  function openPhotoPreview() {
+    blogPhotoPreview.value = !this.blogPhotoPreview
+  }
+  function getOnePost(id) {
+    console.log('id', id)
+    return blogPosts.value.filter((post) => post.blogID === id)
+  }
+ 
   return { 
     getPost,   
     blogID,  
@@ -69,7 +99,15 @@ export const useGetCardStore = defineStore('cardStore', () => {
     blogPostsCards,
     toggleEditPost,
     filterBlogPost,
-    deletePost
+    deletePost,
+    setBlogState,
+    updateBlogTitle,
+    newBlogPost,
+    fileNameChange,
+    createFileURL,
+    openPhotoPreview,
+    updatePost,
+    getOnePost
   }
 })
 

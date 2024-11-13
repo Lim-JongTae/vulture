@@ -10,14 +10,14 @@
 </template>
 
 <script setup>
-const postStore = usePostStore()
+const cardStore = useGetCardStore()
 const blogCoverPhoto = computed(()=> {
-  return postStore.blogPhotoFileURL
+  return cardStore.blogPhotoFileURL
 })
 console.log(blogCoverPhoto)
 
 const closePreview = () => {
-  postStore.openPhotoPreview()
+  cardStore.openPhotoPreview()
 }
 </script>
 

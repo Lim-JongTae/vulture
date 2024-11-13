@@ -84,24 +84,7 @@ actions: {
     profileUsername = doc.data().username,    
     profileInitials = state.profileUsername
   },
-  updateBlogTitle(payload) {
-    this.blogTitle = payload
-  },
-  newBlogPost(body) {
-    this.blogHTML = body
-    console.log('blog post',this.blogHTML)
-    console.log('body',body)
-  },
-  fileNameChange(payload) {
-    this.blogPhotoName = payload    
-  },
-  createFileURL(payload) {
-    this.blogPhotoFileURL = payload
-    console.log('file url',this.blogPhotoFileURL)
-  },
-  openPhotoPreview() {
-    this.blogPhotoPreview = !this.blogPhotoPreview
-  },
+  
   getOnePost (index) {
     return this.sampleBlogPost[index]
   }

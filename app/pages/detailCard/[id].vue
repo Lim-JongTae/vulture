@@ -21,10 +21,6 @@
     data.value = await cardStore.blogPosts.filter((post) => {
       return post.blogID === route.params.id      
     })
-    console.log('item:', data.value)
-    
-    console.log('route', route.params.id)
-
   })
 </script>
 

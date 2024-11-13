@@ -29,8 +29,5 @@
     "vue": "latest",
     "vue-router": "latest",
     "vuex": "^4.0.2"
-  },
-  "overrides": {
-    "vue": "latest"
-  }
+  }  
 }

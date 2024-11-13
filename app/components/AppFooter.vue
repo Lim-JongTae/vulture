@@ -21,6 +21,7 @@
             <li><NuxtLink class="link" to="/">Home</NuxtLink></li>
             <li><NuxtLink class="link" to="/views/blogs">Blogs</NuxtLink></li>
             <li><NuxtLink class="link" to="/createPost" v-if="admin">Create Post</NuxtLink></li>
+            <li><NuxtLink style="--i:2;" to="donation" class="link" >후원하기</NuxtLink></li>
             <li><NuxtLink class="link" to="/auth/login" v-if="!user">Login/Register</NuxtLink></li>
           </ul>
         </div>

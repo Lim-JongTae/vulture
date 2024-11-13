@@ -1,9 +1,9 @@
 <template>
   <div class="blog-card">       
     <div class="icons" v-show="editPost">
-      <div @click="editBlog" class="icon">
+      <div class="icon" @click="editBlog">
         <UIcon name="i-heroicons-pencil-square" class="w-6 h-6 text-green-700"  />        
-      </div>
+      </div>     
       <div @click="deletePost" class="icon">
         <UIcon name="i-heroicons-trash" class="w-6 h-6 text-amber-700" />
       </div>
@@ -14,7 +14,7 @@
       <h6>게시일: {{ new Date(post.blogDate).toLocaleString('ko-KR', { dateStyle: 'long'}) }}</h6>      
       <NuxtLink class="link" :to="`/detailCard/${post.blogID}`">
         상세보기<UIcon name="i-heroicons-arrow-long-right-16-solid" class="ml-4" w-7 h-7 />
-      </NuxtLink>  
+      </NuxtLink>       
     </div>
   </div>
 </template>
@@ -23,6 +23,8 @@
 const postStore = usePostStore()
 const cardStore = useGetCardStore()
 const toast = useToast()
+const router = useRouter()
+const route = useRoute()
 const props = defineProps({
   post: {
     type: Object,
@@ -32,6 +34,11 @@ const props = defineProps({
 const editPost = computed(() => {
   return cardStore.editPost
 })
+const editBlog = () => {  
+  console.log('editBlog', props.post.blogID)
+  router.push(`/editBlog/${props.post.blogID}`)
+}
+
 const deletePost = async () => {
   if (!props.post || !props.post.blogID) {
     console.log('삭제할 PostID가 없습니다.', error)
@@ -43,9 +50,9 @@ const deletePost = async () => {
       toast.add({
         type:'success',
         title: '포스트가 성공적으로 삭제되었습니다.!',        
-        duration: 2000,
+        duration: 1500,
         callback: async () => {
-          await navigateTo('/blogs')
+          await navigateTo('/views/blogs')
         }       
       })
     } catch (error) {
@@ -102,8 +109,7 @@ const deletePost = async () => {
   background-color: #fff;
   min-height: 420px;
   transition: .5s ease all;
-  z-index: 10;
-  
+  z-index: 10;  
 }
 .blog-card :hover {
   transform: rotateZ(-1deg) scale(1.05);
@@ -126,7 +132,6 @@ const deletePost = async () => {
   /* background-color: orange; */
   color: black;
 }
-
 .icon:nth-child(1) {
   margin-right: 10px;
 }

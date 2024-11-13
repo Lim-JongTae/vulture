@@ -14,7 +14,16 @@ const cardStore = useGetCardStore()
     layout: 'create-layout' 
   })
   
-const { blogTitle, blogHTML, blogPhotoFileURL } = storeToRefs(cardStore())
+  const blogTitle = computed(() => {
+    return cardStore.blogTitle
+  })
+  const blogPhotoFileURL = computed(() => {
+    return cardStore.blogPhotoFileURL
+  })
+  const blogHTML = computed(() => {
+    return cardStore.blogHTML
+  })
+
 </script>
 
 <style scoped>

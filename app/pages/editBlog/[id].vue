@@ -1,6 +1,6 @@
 <template>
   <div>   
-    <blog-cover-preview v-show="postStore.blogPhotoPreview" />  
+    <blog-cover-preview v-show="cardStore.blogPhotoPreview" />  
     <LoadingView v-show="loading" />
     <div class="create-post">
       <div class="container">
@@ -33,15 +33,15 @@
               id="dis"
               icon="i-heroicons-eye" 
               class="preview button" 
-              disabled = disabled
+              disabled 
               :class="buttonClass"
               @click="openPreview"
              >
              사진 미리보기
             </UButton>                          
-            <div class="file-selector" v-show="cardStore.blogPhotoName">
+            <div class="file-selector" v-show="blogPhotoName">
               <div>파일 명:</div>
-              <div class="text-align">{{ cardStore.blogPhotoName }}</div>
+              <div class="text-align">{{ blogPhotoName }}</div>
             </div>
           </div>
           </div>          
@@ -56,8 +56,8 @@
         </ClientOnly>
       </div>
       <div class="blog-actions">
-        <UButton @click="uploadBlog" class="button">블로그 등록</UButton>
-        <NuxtLink class="link-button" :to="`/views/blogPreview/${blogID}`"><UButton class="mt-8">미리보기</UButton></NuxtLink>
+        <UButton @click="updateBlog" class="button">수정하기</UButton>
+        <NuxtLink class="link-button" :to="`/viewEdit/${routeID}`"><UButton class="mt-8">미리보기 변경</UButton></NuxtLink>
       </div>
      </div>
     <div>      
@@ -72,9 +72,9 @@
 }) 
   import { QuillEditor } from '@vueup/vue-quill'
   import '@vueup/vue-quill/dist/vue-quill.snow.css';  
-  import { storeToRefs } from 'pinia';
+  import { storeToRefs } from 'pinia';  
   import { uploadBytes, ref as ref1, getDownloadURL,  } from "firebase/storage";
-  import { addDoc, collection, doc, setDoc } from 'firebase/firestore';
+  import { addDoc, collection, doc, setDoc, updateDoc } from 'firebase/firestore';
 
   const toolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
@@ -109,11 +109,12 @@
   // import Quill from 'quill'
   // import 'quill/dist/quill.core.css'
   // import 'quill/dist/quill.snow.css'  
-  const router = useRouter()
+  const route = useRoute()
+  const router = useRouter();
   const postStore = usePostStore()   
   const userStore = useUsersStore()  
-  const cardStore = useGetCardStore()
-  const { blogPhotoName } = storeToRefs(postStore)  
+  const cardStore = useGetCardStore()   
+  const { blogPhotoFileURL, blogPhotoName } = storeToRefs(cardStore)
   const dataDocs = ref[null]
   const body = ref("")
   const downloadURL = ref(null)
@@ -122,17 +123,20 @@
   const file = ref(null)  
   const toast = useToast()
   const loading = ref(false)
+  const routeID = ref(null)
+  const currnetBlog = ref(null)
 
   const buttonClass = computed(() => {
-    return {'button-inactive': !cardStore.blogPhotoFileURL}
+    return {'button-inactive': !blogPhotoFileURL} 
   })
+
   const imageHandle = (file, Editor, cursorLocation, resetUploader) => {
     console.log('imageHandel')
     const { $storage } = useNuxtApp()    
     const docRef = ref1($storage, `documents/BlogCoverPhotos/test/${file.name}`)
     console.log('docrefimgeHandle',docRef)
     uploadBytes(docRef, file).then((snapshot) => {          
-          console.log('snapshot',snapshot)                                     
+                                         
       },      
     (error) => {
       console.log(error)
@@ -143,11 +147,12 @@
     }
     )
   }
-   const uploadBlog = async ()=> {        
+   const updateBlog = async (id, updates)=> {        
     const { $storage, $db } = useNuxtApp()
+    const dataBase = await doc($db, 'blogPosts', routeID.value)    
     if (blogTitle.value.length !== 0 && blogHTML.value.length !== 0) {  
-      loading.value = true          
-      if (file.value.name)  {        
+      if (file.value)  {        
+        loading.value = true          
         const docRef = ref1($storage, `documents/BlogCoverPhotos/test/${postStore.blogPhotoName}`)        
         console.log('docref',docRef)
         try {     
@@ -170,42 +175,51 @@
           })                 
           console.log('documebnt', dataBase)    
           await cardStore.getPost()
-          loading.value = false          
-          toast.add({
-            title: "블로그 등록 성공",
-            color: "green",
-            background: "green",
-            timeout: 2500,
-            callback: () => {
-              navigateTo('/views/blogs') 
-            }
-          })   
-          reloadNuxtApp({
-            path: "/views/blogs",
-            persistState: true
-          })
+          loading.value = false                     
+          
+          
           return
         } catch (error) {
           console.log('dbError',error)
           loading.value = false
         }                             
-      }      
-      error.value = true
-      errorMsg.value = "업로드할 사진을 입력해 주세요!"
-      setTimeout(() => {
-        error.value = false
-      }, 4000)
-      return        
+      }   
+      loading.value = true          
+      await updateDoc(dataBase,{
+        blogHTML: blogHTML.value,
+        blogTitle: blogTitle.value       
+      })
+      await cardStore.updatePost(routeID)
+      loading.value = false
+      toast.add ({
+            title: "블로그를 성공적으로 수정하였습니다.",
+            color: "green",
+            background: "black",
+            timeout: 2500,
+            callback: () => {
+              navigateTo("/views/blogs")               
+            }
+          })     
+      reloadNuxtApp({
+        path: "/views/blogs",
+        persistState: true
+      })
+      return
       }
       error.value = true
       toast.add({
         title: "블로그 제목과 내용을 입력하세요",
         color: "red",
-        background: "red",
-        timeout: 2500,  
+        background: "black",
+        timeout: 1500,  
       })
     return
     }   
+    const fileChange = (event) => {         
+    file.value = event.target.files[0]            
+    cardStore.fileNameChange(file.value.name) 
+    cardStore.createFileURL(URL.createObjectURL(file.value))     
+  } 
   const openPreview = () => {
     cardStore.openPhotoPreview()
   }
@@ -229,20 +243,20 @@
       return cardStore.blogHTML
     },
     set(value) {
-      cardStore.newBlogPost(value)
-      console.log(value)
+      cardStore.newBlogPost(value)      
     }
-  })  
-  const fileChange = (event) => {         
-    file.value = event.target.files[0]            
-    cardStore.fileNameChange(file.value.name) 
-    cardStore.createFileURL(URL.createObjectURL(file.value))    
-  }
-  onMounted(() => {
-    const getDis = document.getElementById('dis')
-    getDis.removeAttribute('disabled')   
   })
- 
+   onMounted(async() => {
+    routeID.value = route.params.id    
+    currnetBlog.value = await cardStore.blogPosts.filter((post) => {
+      return post.blogID === routeID.value
+    })
+    cardStore.setBlogState(currnetBlog.value[0])     
+    const getDis = document.getElementById('dis')
+    if (blogPhotoName) {
+      getDis.removeAttribute('disabled')      
+    }
+  })
  
 </script>
 

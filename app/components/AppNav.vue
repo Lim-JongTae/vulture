@@ -18,6 +18,7 @@
       <NuxtLink style="--i:0;" to="/" class="link">Home</NuxtLink>
       <NuxtLink style="--i:1;" to="/views/blogs" class="link">Blogs</NuxtLink>
       <NuxtLink style="--i:2;" to="/createPost" class="link" >Create Post</NuxtLink>
+      <NuxtLink style="--i:2;" to="donation" class="link" >후원하기</NuxtLink>
       <NuxtLink style="--i:3;" to="/auth/login" class="link" v-if="!user" >Login/Register</NuxtLink>      
     </nav>    
     <!-- Profile Menu -->
