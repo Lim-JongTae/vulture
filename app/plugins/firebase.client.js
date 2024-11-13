@@ -6,6 +6,7 @@ import { getFunctions } from "firebase/functions";
 
 
 
+<<<<<<< HEAD
 export default defineNuxtPlugin((nuxtApp) => {  
   const {
     apiKey,
@@ -28,6 +29,12 @@ export default defineNuxtPlugin((nuxtApp) => {
     appId,
     measurementId
   };
+=======
+
+  
+ 
+ 
+>>>>>>> 9afba8d90e0cc5f5053d7fe7da1b78708c4adbbd
   
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
