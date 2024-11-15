@@ -3,9 +3,12 @@
     <div class="post-view noosans-font">
       <div class="container">
         <h2>{{ currentBlog.title }}</h2>
-        <img :src="`/blogPhotos/${currentBlog.blogCoverPhoto}.jpg`" alt="cover photo">
+        <img :src="`/blogPhotos/${currentBlog.blogCoverPhoto}.jpg`" alt="cover photo">        
         <div class="post-content " v-html="currentBlog.blogHTML"></div>
       </div>
+    </div>
+    <div class="text-center">
+      <UButton to="/">되돌아가기</UButton>
     </div>
    </div>
 </template>
@@ -19,8 +22,8 @@
   })
 const currentBlog = ref(null)
 const index = ref(route.params.id - 1)
-  onMounted(async() => {
-    currentBlog.value = await postStore.getOnePost(index.value)    
+  onMounted(async() => {  
+    currentBlog.value = await postStore.getOnePost(index.value)     
   }) 
 </script>
 

@@ -17,7 +17,7 @@
     <nav class="navbar">      
       <NuxtLink style="--i:0;" to="/" class="link">Home</NuxtLink>
       <NuxtLink style="--i:1;" to="/views/blogs" class="link">Blogs</NuxtLink>
-      <NuxtLink style="--i:2;" to="/createPost" class="link" >Create Post</NuxtLink>
+      <NuxtLink style="--i:2;" to="/createPost" class="link" v-if="pAdmin" >Create Post</NuxtLink>
       <NuxtLink style="--i:2;" to="donation" class="link" >후원하기</NuxtLink>
       <NuxtLink style="--i:3;" to="/auth/login" class="link" v-if="!user" >Login/Register</NuxtLink>      
     </nav>    
@@ -252,7 +252,8 @@ const toggleProfileMenu = (event) => {
   color: #343232;
   font-weight: bolder;
   /* background: linear-gradient(to right, #06e56e, #083de9); */
-  background-color: #dbdbdb;
+  background-color: #eae699;
+  box-shadow: 0 4px 6px 1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.006);
 }
 .profile span {
   pointer-events: none;

@@ -1,24 +1,26 @@
 <template>
-  <div class="blog-wrapper shadow04" :class="{ 'no-user': !user }">
+  <div class="blog-wrapper shadow04 no-user">
     <div class="blog-content">
-        <div class=" whitespace-pre-wrap">          
+        <div class=" whitespace-pre-wrap ">          
             <h2 v-if="post.welcomeScreen" class="roboto-font">{{ post.title }}</h2>            
             <h2 v-else class="jua-font">{{ post.blogTitle }}</h2>
             <p v-if="post.welcomeScreen" class="notossans-font">{{ post.blogPost}}</p>            
-            <p class="content-preview font-extrabold" v-else v-html="post.blogHTML"></p>
-            <NuxtLink class="link link-light font-bold" v-if="post.welcomeScreen" to="/auth/login">로그인/회원가입
+            <p class="content-preview notosans-font" v-else v-html="post.blogHTML"></p>
+            <NuxtLink class="link link-light font-bold" v-if="!user" to="/auth/login">로그인/회원가입
               <UIcon name="i-heroicons-arrow-long-right-16-solid" class="w-7 h-7 ml-2 dark:invert arrow"/>
-            </NuxtLink>            
-           <!-- <NuxtLink class="link" v-else :to="{ name: '/views/viewBlog:id', params: { blogid: post.blogId} }"> -->
-           <NuxtLink class="link" v-else :to="`/detailBlog/${post.id}`">
-              게시물 보기
-           </NuxtLink>                                        
-          </div>
+            </NuxtLink>      
+            <div class="disnone">
+              <NuxtLink class="link disnone text-gray-600"  :to="`/detailBlog/${post.id}`">
+                게시물 보기
+              </NuxtLink>                                       
+            </div>                 
+                                              
         </div>
+    </div>
         <div class="blog-photo">
           <NuxtImg class="img" v-if="post.welcomeScreen" :src="`/blogPhotos/${post.photo}.jpg`" alt="Welcome Image" />
           <NuxtImg class="img" v-else :src="`/blogPhotos/${post.blogCoverPhoto}.jpg`" alt="CoverPhoto" />                        
-        </div>
+      </div>
   </div>
 </template>
 
@@ -26,7 +28,7 @@
 const props = defineProps({
   post: Object
 })
-const { pId } = useUsersStore()
+const { user } = useUsersStore()
 </script>
 <style scoped>
 
@@ -35,7 +37,6 @@ const { pId } = useUsersStore()
   flex-direction: column;
   min-height: 100vh;  
 }
-
 .blog-content {
   display: flex;
   flex-direction: column;
@@ -45,15 +46,11 @@ const { pId } = useUsersStore()
   order: 2;  
 }
 
-.blog-wrapper:nth-child(even) {
-  .blog-content {
-    order: 2;
-  }  
+.blog-wrapper:nth-child(even) .blog-content {  
+    order: 2;    
 }
-.blog-wrapper:nth-child(even) {
-  .blog-photo {
-    order: 1;
-  }
+.blog-wrapper:nth-child(even) .blog-photo {  
+    order: 1;  
 }
 div {
   @apply max-w-[100vw] py-20 px-6
@@ -65,13 +62,17 @@ p {
   @apply text-lg font-light leading-10 min-h-12 h-auto
 }
 .content-preview {
-  @apply text-sm max-h-6 w-64 whitespace-nowrap overflow-hidden text-ellipsis
+  @apply text-sm max-h-6 whitespace-nowrap overflow-hidden text-ellipsis font-bold
 }
 .link {
   @apply inline-flex items-center mt-4 pb-1 border border-solid 
-    border-transparent delay-100 ease-in transition-all
-     hover:border-b-slate-500
+    border-transparent delay-100 ease-in transition-all    
 }
+
+.link:hover {
+  @apply border-b-slate-600 font-bold
+}
+
 .link-light {
   @apply hover:border-b-slate-500
 }

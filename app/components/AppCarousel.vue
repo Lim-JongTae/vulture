@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <video class="slider" src="/movie/fly.mp4" autoplay controls></video>
+    <video class="slider" src="/movie/fly.mp4" controls></video>
     <ul>
       <li @click="videoslider('/movie/food_1.mp4')"><video src="/movie/food_1.mp4"></video></li>
       <li @click="videoslider('/movie/food_2.mp4')"><video src="/movie/food_2.mp4"></video></li>

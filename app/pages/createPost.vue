@@ -1,6 +1,6 @@
 <template>
   <div>   
-    <blog-cover-preview v-show="postStore.blogPhotoPreview" />  
+    <blog-cover-preview v-show="cardStore.blogPhotoPreview" />  
     <LoadingView v-show="loading" />
     <div class="create-post">
       <div class="container">

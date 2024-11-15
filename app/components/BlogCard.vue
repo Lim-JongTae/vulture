@@ -13,7 +13,7 @@
       <h4>{{ post.blogTitle }}</h4>
       <h6>게시일: {{ new Date(post.blogDate).toLocaleString('ko-KR', { dateStyle: 'long'}) }}</h6>      
       <NuxtLink class="link" :to="`/detailCard/${post.blogID}`">
-        상세보기<UIcon name="i-heroicons-arrow-long-right-16-solid" class="ml-4" w-7 h-7 />
+        상세보기<UIcon name="i-heroicons-arrow-long-right-16-solid" class="ml-4 w-7 h-7" />
       </NuxtLink>       
     </div>
   </div>

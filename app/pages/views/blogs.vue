@@ -6,8 +6,7 @@
         <input type="checkbox" v-model="editPost" @click="!editPost"/>
       </div>
       <BlogCard :post="post" v-for="(post, index) in blogPosts" :key="index" class="mt-6" />
-    </div>
-    {{ editPost }}
+    </div>   
   </div>
 </template>
 <script setup>

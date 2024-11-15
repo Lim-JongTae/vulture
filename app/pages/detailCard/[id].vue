@@ -6,7 +6,9 @@
       <img :src="data[0].blogCoverPhoto" alt="Cover Photo" />
       <div class="post-content ql-editor" v-html="data[0].blogHTML"></div>
     </div>
-    
+    <div class="text-center">
+      <UButton to="/views/blogs">되돌아가기</UButton>
+    </div>
   </div>
 </template>
 

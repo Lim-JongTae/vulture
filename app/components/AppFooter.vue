@@ -10,26 +10,26 @@
         </div>
         <div class="col">
           <h3>Office <div class="underline"><span></span></div></h3>
-          <p>울산남구 신정동</p>
+          <p>울산광역시 <br />남구 월평로<br/> 91(신정동)</p>
           <P>녹색에너지</P>
           
-          <h4>052-222-2345</h4>
+          <h4>052-227-4111</h4>
         </div>
         <div class="col">
           <h3>Links <div class="underline"><span></span></div></h3>
           <ul>
             <li><NuxtLink class="link" to="/">Home</NuxtLink></li>
             <li><NuxtLink class="link" to="/views/blogs">Blogs</NuxtLink></li>
-            <li><NuxtLink class="link" to="/createPost" v-if="admin">Create Post</NuxtLink></li>
-            <li><NuxtLink style="--i:2;" to="donation" class="link" >후원하기</NuxtLink></li>
-            <li><NuxtLink class="link" to="/auth/login" v-if="!user">Login/Register</NuxtLink></li>
+            <li><NuxtLink class="link" to="/createPost" v-if="pAdmin">Create Post</NuxtLink></li>
+            <li><NuxtLink style="--i:2;" to="/donation" class="link" >후원하기</NuxtLink></li>
+            <li><NuxtLink class="link" to="/auth/login" v-if="!pEmail">Login/Register</NuxtLink></li>
           </ul>
         </div>
         <div class="col">
           <h3>NewsLetter <div class="underline"><span></span></div></h3>
           <div class="form1">
             <MdiIcon icon="mdiMail" size="1.2rem" class="mr-3" />
-            <span class="mr-3">sample@test.com</span>
+            <span class="mr-3">noksek@hanmail.net</span>
             <MdiIcon icon="mdiArrowRight" size="1.2rem" />
           </div>
           <div class="social-icons">
@@ -41,7 +41,7 @@
         </div>
       </div>
       <hr>
-      <p class="copyright"><strong>&copy; {{ new Date().getFullYear() }} All Rights Reserved</strong></p>
+      <p class="copyright"><strong>&copy; {{ new Date().getFullYear() }} All Rights Reserved noksek</strong> </p>
     </footer>
   </div>
 </template>
@@ -49,16 +49,12 @@
 <script setup>
 const isYear = ref(null)
 const useStore = useUsersStore()
-const user = useStore.pId
-const admin = useStore.pAdmin
-console.log(admin)
-
+const { pEmail, pAdmin } =storeToRefs(useStore)
 </script>
 
 <style scoped>
 .body1 {
-  background-color: #eef8ff;
-  
+  background-color: #eef8ff;  
   
 }
 footer {

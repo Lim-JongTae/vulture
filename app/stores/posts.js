@@ -7,7 +7,7 @@ import { addDoc, collection, getDocs, doc, query, orderBy } from "firebase/fires
 export const usePostStore = defineStore('postStore', {
   state: () => ({   
      
-    welcomeScreen: {
+    welcomeScreen: {      
       title: 'Welcome!',
       blogPost:'울산독수리의 힘찬 비상~~ 천연기념물 제234호\n 환경부지정 멸종위기 2급' ,      
       photo: 'nn',
