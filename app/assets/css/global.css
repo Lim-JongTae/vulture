@@ -13,7 +13,22 @@
   --gold: #FBD784;
   --1eb: #1eb8b8;
   --box-color: 0 0.4rem 0.6rem -0.1rem rgba(0,0,0,0.1), 0 0.2rem 0.4rem -0.1rem rgba(0,0,0,0.006);
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --body-color: hsl(220, 100%, 97%);
+  --normal-font-size: 0.938rem;
+  --font-regular: 400;
+  --font-semi-bold: 600;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --header-height: 3.5rem;  
 }
+@media screen and (min-width: 1024px) {
+  :root {
+   --normal-font-size: 1rem;
+  } 
+ }
 * {
   margin: 0;
   padding: 0;
