@@ -14,12 +14,13 @@
       <UIcon name="i-heroicons-x-mark-16-solid" class="w-7 h-7" id= "close-icon" />
     </label>
      
-    <nav class="navbar">      
+    <nav class="navbar">  
       <NuxtLink style="--i:0;" to="/" class="link">Home</NuxtLink>
       <NuxtLink style="--i:1;" to="/views/blogs" class="link">Blogs</NuxtLink>
       <NuxtLink style="--i:2;" to="/createPost" class="link" v-if="pAdmin" >Create Post</NuxtLink>
-      <NuxtLink style="--i:2;" to="donation" class="link" >후원하기</NuxtLink>
-      <NuxtLink style="--i:3;" to="/auth/login" class="link" v-if="!user" >Login/Register</NuxtLink>      
+      <NuxtLink style="--i:2;" to="/about" class="link" >About Us</NuxtLink>            
+      <NuxtLink style="--i:2;" to="donation" class="link" >후원하기</NuxtLink>        
+      <NuxtLink style="--i:3;" to="/auth/login" class="link" v-if="!user" >Login/Register</NuxtLink>          
     </nav>    
     <!-- Profile Menu -->
     <div v-if="user" @click="toggleProfileMenu" class="profile" ref="profile">
