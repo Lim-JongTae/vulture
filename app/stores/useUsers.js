@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { onAuthStateChanged, updateProfile } from "firebase/auth";
+import { onAuthStateChanged, updateProfile, sendPasswordResetEmail } from "firebase/auth";
 
 export const useUsersStore = defineStore('useStore',{  
   state: () => ({ 
@@ -17,9 +17,7 @@ export const useUsersStore = defineStore('useStore',{
         if (user) {
           const token = await user.getIdTokenResult()
           // console.log('token',token.claims)
-          // console.log('usr',user.displayName)
- 
- 
+          // console.log('usr',user.displayName) 
           this.user = user
           this.pdisplayName = user.displayName
           this.pAdmin = token.claims.admin
@@ -29,11 +27,7 @@ export const useUsersStore = defineStore('useStore',{
         }
       })}    
     },
-    async changeName(payload) {
-      // this.user.updateProfile({ displayName: payload })
-      // this.pDisplayName = payload
-      // await updateProfile($auth.currentUser, { displayName: payload })
-      // this.pdisplayName = payload
+    async changeName(payload) {      
       this.pdisplayName = payload
     },
     async updateUser() {
@@ -44,6 +38,14 @@ export const useUsersStore = defineStore('useStore',{
         console.log('after update',this.pdisplayName)
       })      
     }, 
+    async resetPassword (email) {
+      const { $auth } = useNuxtApp()
+      try {
+        sendPasswordResetEmail($auth, email)
+      } catch (error) {
+        console.log(error)
+      }
+  },
   getters: {   
     userId () {
       return this.pId      

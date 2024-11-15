@@ -90,8 +90,8 @@ const handleRegSubmit = async () => {
     console.log(displayName.value, email.value, password.value)   
     await authStore.register(email.value, password.value, displayName.value)   
     toast.add({
-      title: "회원가입 중",
-      timeout: 2500,
+      title: "성공적으로 회원가입 되었습니다.",
+      timeout: 2000,
       callback: async () => {
         await navigateTo('/')
     }})

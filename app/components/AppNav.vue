@@ -55,12 +55,7 @@
     <!-- profile end --> 
     <ClientOnly>
         <ColorModeSelector />
-      </ClientOnly>         
-    <!-- <div class="logout">
-      {{ useStore.pInitials }}
-      {{ useStore.pEmail }}
-      <UButton v-if="!user" @click="usersStore.logout" class="-mr-12 ml-3 text-gray-950"><UIcon name="i-ic-baseline-logout"></UIcon>Logout</UButton>      
-    </div> -->
+      </ClientOnly>            
   </header>
 
 </template>
@@ -131,17 +126,6 @@ const toggleProfileMenu = (event) => {
   margin: 0 5px 0 0 ;
   text-decoration: none;    
 }
-/* .navbar {
- position: absolute;
- top:100%;
- left: 0;
- width: 100%;
- height: 17.5rem;
- background: rgba(0, 0, 0, 0.3);
- backdrop-filter: blur(50px);
- box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);  
-} */
-
 .navbar .link {
   font-size: 1.15rem;
   color: white;

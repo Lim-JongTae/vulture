@@ -9,7 +9,7 @@
         <div class="inputs">
           <div class="input">
             <input type="text" placeholder="이메일" v-model="state.email">
-            <img src="/Icons/envelope-regular.svg" class="icon" alt="">
+            <UIcon name="i-heroicons-envelope-16-solid" class="icon" alt="" />
           </div>
         </div>
         <UButton @click.prevent="resetEmailPassword" size="xl">초기화</UButton>
@@ -53,9 +53,6 @@ const closeModal = () => {
 <style scoped>
 .reset-password {
   position: relative;
-}
-.form-wrap {    
-
 }
 .reset h2 {  
   margin-bottom: 8px;
@@ -115,11 +112,11 @@ h2 {
   border: none;
   background: #f2f7f6;
   padding: 4px 4px 4px 30px;
-  height: 50px;
-  &:focus {
+  height: 50px;  
+}
+.input input:focus {
     outline: none;
   }
-}
 .icon {
   width: 12px;
   position: absolute;
@@ -132,10 +129,10 @@ h2 {
   font-size: 14px;
   margin: 16px 0 32px;
   border-bottom: 1px solid transparent;
-  transition: 0.5s ease all; 
-  &:hover {  
-    border-color: #303030;  
+  transition: 0.5s ease all;  
 }
+.forgot-password :hover {  
+  border-color: #303030;  
 }
 .angle {
   display: none;
@@ -156,11 +153,11 @@ h2 {
   width: 100%;
   height: 90%;
   background-position: center;
-  filter: blur(4px);
-  &:hover {
+  filter: blur(4px); 
+}
+.background :hover {
     filter: blur(0px);
   }
-}
 .login-register {
   margin-bottom: 32px;
 }

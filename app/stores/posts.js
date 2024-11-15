@@ -1,9 +1,6 @@
 import { defineStore } from "pinia";
 import { addDoc, collection, getDocs, doc, query, orderBy } from "firebase/firestore";
 
-// import { useFirebaseUser } from "~/composables/useState";
-
-
 export const usePostStore = defineStore('postStore', {
   state: () => ({   
      
@@ -62,16 +59,6 @@ export const usePostStore = defineStore('postStore', {
         blogHTML: "한반도 독수리 보전을 위한 네트워크 구축<br>울산, 철원, 파주, 경남 고성, 김해",
         blogCoverPhoto: "metting"
       },
-    ],
-    items : [
-      'blogCards/stock-1.jpg',
-      'blogCards/stock-2.jpg',
-      'blogCards/stock-3.jpg',
-      // '/movie/fly.mp4',
-      // '/movie/food_1.mp4',
-      // '/movie/food_2.mp4',
-      // '/movie/food_3.mp4' 
-         
     ]  
    }
 ),
@@ -87,9 +74,7 @@ actions: {
     const dateBase = await $db.collection('Users').where('userId', '==', $auth.currentUser.uid)
     const dbResults = await dateBase.get()
     const token = await user.getIdTokenResult()
-    const admin = await token.claims.admin
-    console.log('store',dbResults)
-    // this.profileId = currUser;
+    const admin = await token.claims.admin  
     profileEmail = doc.data().email;
     profileUsername = doc.data().username,    
     profileInitials = state.profileUsername

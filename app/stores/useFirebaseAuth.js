@@ -11,7 +11,7 @@ import {
 
 export const useFirebaseAuthStore = defineStore('useFirebaseAuthStore',{
   state: () => ({
-  
+    users: null,
    }),
    actions: {
     async register (email, password, displayName) {

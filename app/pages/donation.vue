@@ -45,12 +45,7 @@
         </p>
       </li>
     </ul>  
-   
-    <!-- <div class="card">
-     <h2>후원하기</h2>  
-    </div>   -->
-  </section>
- 
+  </section> 
     </main>
 </template>
 <script>

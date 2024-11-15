@@ -8,15 +8,15 @@
       <div class="inputs">              
         <div class="input">
           <input type="text" placeholder="사용자 이름" v-model="username" />
-          <img src="/Icons/user-alt-light.svg" class="icon" />
+          <UIcon name="i-heroicons-user-circle-16-solid" class="icon" />
           </div>            
           <div class="input">
             <input type="email" placeholder="이메일" v-model="email" />
-            <img src="/Icons/envelope-regular.svg" class="icon" />
+            <UIcon name="i-heroicons-envelope-16-solid" class="icon" />
           </div>               
           <div class="input">
               <input type="password" placeholder="비밀번호" v-model="password" />
-              <img src="/Icons/lock-alt-solid.svg" class="icon" />
+              <UIcon name="i-heroicons-lock-closed-20-solid" class="icon" />
           </div>
           <div class="input">                    
               <input type="password" placeholder="비밀번호 확인" v-model="rePassword" />
@@ -34,7 +34,7 @@
 <script>
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { setDoc, doc } from 'firebase/firestore';
-
+const toast = useToast()
 export default {
   data() {
     return {
@@ -70,26 +70,27 @@ methods: {
         createdAt: new Date()
       }).then(function() {
         console.log('Success Upload')
-      })
-    
-      // const dataBase = $db.collection('users').doc(result.user.uid)         
-      
-       
-      // await dataBase.setDoc({
-      //   username: this.username,
-      //   email: this.email,
-      //   password: this.password,
-      //   createdAt: new Date()
-      // }).then(function() {
-      //   console.log('Success Upload')
-      // })
-      useToast().add({description:'계정생성 중~', color: 'green'})
-      router.push({ path: '/'})
+      })    
+      toast.add({
+        title:'계정생성 중~', 
+        timeout: 2000,
+        color: 'green',
+        callback: async () => {
+          await navigateTo('/')
+        }
+      })    
       return
     }
     this.error = true;
     this.errorMsg = "빈칸이 없는지 확인하세요~";
-    useToast().add({description:'빈칸이 없는지 확인하세요~', color: 'red'})
+    toast.add({
+        title:'빈 칸이 없는지 확인하세요~', 
+        timeout: 2000,
+        color: 'red',
+        callback: async () => {
+          await navigateTo('/auth/register')
+        }
+      })    
     return
 }}
 
@@ -170,10 +171,10 @@ h2 {
   font-size: 14px;
   margin: 16px 0 32px;
   border-bottom: 1px solid transparent;
-  transition: 0.5s ease all; 
-  &:hover {  
-    border-color: #303030;  
+  transition: 0.5s ease all;  
 }
+.forgot-password :hover {  
+    border-color: #303030;  
 }
 .angle {
   display: none;
@@ -195,9 +196,9 @@ h2 {
   height: 90%;
   background-position: center;
   filter: blur(2px);
-  &:hover {
-    filter: blur(0px);
-  }
+}
+.background:hover {
+  filter: blur(0px);
 }
 .login-register {
   margin-bottom: 32px;

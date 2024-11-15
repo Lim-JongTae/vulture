@@ -1,10 +1,14 @@
 <template>
-  <div v-if="currentBlog">
+  <div v-if="currentBlog" class="mt-10">    
+    dd
    <div class="post-view noosans-font">
      <div class="container">
-       <h2>{{ currentBlog.title }}</h2>
-       <img :src="`/blogPhotos/${currentBlog.blogCoverPhoto}.jpg`" alt="cover photo">
-       <div class="post-content " v-html="currentBlog.blogHTML"></div>
+       <h2>{{ currentBlog[0].blogTitle }}</h2>
+       <img :src="currentBlog[0].blogCoverPhoto" alt="cover photo">
+       <div class="post-content " v-html="currentBlog[0].blogHTML"></div>
+     </div>
+     <div class="text-center">
+       <UButton size="sm" to="/views/blogs" icon="i-heroicons-receipt-refund-16-solid">되돌아가기</UButton>      
      </div>
    </div>
   </div>
@@ -21,9 +25,11 @@
 const currentBlog = ref(null)
 const id = ref(route.params.id )
  onMounted(async() => {
-  currentBlog.value  = await cardStore.getOnePost(id.value)       
-   console.log('current', currentBlog.value)
- }) 
+  currentBlog.value  = await cardStore.blogPosts.filter((post) => {
+    return post.blogID === route.params.id         
+  })
+  console.log('current', currentBlog.value[0].blogTitle )
+  }) 
 </script>
 
 <style scoped>

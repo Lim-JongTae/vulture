@@ -4,20 +4,6 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   }, 
-  head: {
-    title: "Ulsan Vulture",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "Ulsan Vulture", name: "Nockseck", content: "Vulture" },
-    ],
-    // link: [   
-    //   {
-    //     rel: "stylesheet",
-    //      href: "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
-    //   },   
-    // ],     
-  },
   experimental: {
    sharedPrerenderData: false,
    compileTemplate: true,
@@ -31,11 +17,11 @@ export default defineNuxtConfig({
    }
  },
  
-  // unhead: {
-  //   renderSSRHeadOptions: {
-  //     omitLineBreaks: false
-  //   }
-  // },
+  unhead: {
+    renderSSRHeadOptions: {
+      omitLineBreaks: false
+    }
+  },
 
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true,

@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="text-center">
-      <UButton to="/">되돌아가기</UButton>
+      <UButton to="/" icon="i-heroicons-receipt-refund-16-solid">되돌아가기</UButton>
     </div>
    </div>
 </template>

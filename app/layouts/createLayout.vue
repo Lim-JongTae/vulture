@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-const firebaseUser = useFirebaseUser()
+
 useHead({
   titleTemplate: '%s - 울산독수리'
 })
@@ -27,18 +27,6 @@ useSeoMeta({
   twitterCard: '울산시민과학단'
 })
 
-useHead({
-  htmlAttrs: {
-    lang: 'ko'
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/favicon.ico'
-    }
-  ]
-})
 </script>
 
 <style scoped>

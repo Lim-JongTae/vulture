@@ -1,17 +1,13 @@
 import {  
-  getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged, 
  } from 'firebase/auth';
 import { useFirebaseUser } from './useState';
- 
- 
-
  export const createUser = async (email, password) => {
-    // const { $auth } = useNuxtApp();
-    const auth = getAuth()
-    const credentials = await createUserWithEmailAndPassword(auth, email, password)   
+    const { $auth } = useNuxtApp();
+    
+    const credentials = await createUserWithEmailAndPassword($auth, email, password)   
       .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;     
@@ -20,9 +16,8 @@ import { useFirebaseUser } from './useState';
  }
 
  export const signInUser = async (email, password) => {  
-  const { $auth } = useNuxtApp();
-  const auth = getAuth()
-  const credentials = await signInWithEmailAndPassword(auth, email, password)
+  const { $auth } = useNuxtApp();  
+  const credentials = await signInWithEmailAndPassword($auth, email, password)
 
   .catch((error) => {
     const errorCode = error.code;
@@ -53,9 +48,8 @@ import { useFirebaseUser } from './useState';
  };
 
  export const signOutUse = async () => {
-  // const { $auth } = useNuxtApp();  .
-  const auth = getAuth()
-  const result = await auth.signOut()
+  const { $auth } = useNuxtApp();  
+  const result = await $auth.signOut()
   console.log('Logout:', result)
   return result;
 }

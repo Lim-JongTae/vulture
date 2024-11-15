@@ -129,14 +129,27 @@
   const buttonClass = computed(() => {
     return {'button-inactive': !blogPhotoFileURL} 
   })
-
+  onMounted(async() => {
+    routeID.value = route.params.id    
+    currnetBlog.value = await cardStore.blogPosts.filter((post) => {
+      return post.blogID === routeID.value
+    })
+    cardStore.setBlogState(currnetBlog.value[0])     
+    const getDis = document.getElementById('dis')
+    if (blogPhotoName) {
+      getDis.removeAttribute('disabled')      
+    }
+  })
+  // onBeforeUnmount(() => {
+  //   cardStore.editPost.value = false
+  // })
   const imageHandle = (file, Editor, cursorLocation, resetUploader) => {
     console.log('imageHandel')
     const { $storage } = useNuxtApp()    
     const docRef = ref1($storage, `documents/BlogCoverPhotos/test/${file.name}`)
     console.log('docrefimgeHandle',docRef)
     uploadBytes(docRef, file).then((snapshot) => {          
-                                         
+      console.Console('snapshot',snapshot)
       },      
     (error) => {
       console.log(error)
@@ -153,7 +166,7 @@
     if (blogTitle.value.length !== 0 && blogHTML.value.length !== 0) {  
       if (file.value)  {        
         loading.value = true          
-        const docRef = ref1($storage, `documents/BlogCoverPhotos/test/${postStore.blogPhotoName}`)        
+        const docRef = ref1($storage, `documents/BlogCoverPhotos/${postStore.blogPhotoName}`)        
         console.log('docref',docRef)
         try {     
           const snapshot = await uploadBytes(docRef, file.value)
@@ -175,9 +188,7 @@
           })                 
           console.log('documebnt', dataBase)    
           await cardStore.getPost()
-          loading.value = false                     
-          
-          
+          loading.value = false               
           return
         } catch (error) {
           console.log('dbError',error)
@@ -190,7 +201,7 @@
         blogTitle: blogTitle.value       
       })
       await cardStore.updatePost(routeID)
-      loading.value = false
+      loading.value = false     
       toast.add ({
             title: "블로그를 성공적으로 수정하였습니다.",
             color: "green",
@@ -244,17 +255,6 @@
     },
     set(value) {
       cardStore.newBlogPost(value)      
-    }
-  })
-   onMounted(async() => {
-    routeID.value = route.params.id    
-    currnetBlog.value = await cardStore.blogPosts.filter((post) => {
-      return post.blogID === routeID.value
-    })
-    cardStore.setBlogState(currnetBlog.value[0])     
-    const getDis = document.getElementById('dis')
-    if (blogPhotoName) {
-      getDis.removeAttribute('disabled')      
     }
   })
  

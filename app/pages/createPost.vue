@@ -57,7 +57,7 @@
       </div>
       <div class="blog-actions">
         <UButton @click="uploadBlog" class="button">블로그 등록</UButton>
-        <NuxtLink class="link-button" :to="`/views/blogPreview/${blogID}`"><UButton class="mt-8">미리보기</UButton></NuxtLink>
+        <NuxtLink class="link-button" :to="`/detailCard/${blogID}`"><UButton class="mt-8">미리보기</UButton></NuxtLink>
       </div>
      </div>
     <div>      
@@ -129,7 +129,7 @@
   const imageHandle = (file, Editor, cursorLocation, resetUploader) => {
     console.log('imageHandel')
     const { $storage } = useNuxtApp()    
-    const docRef = ref1($storage, `documents/BlogCoverPhotos/test/${file.name}`)
+    const docRef = ref1($storage, `documents/BlogCoverPhotos/${file.name}`)
     console.log('docrefimgeHandle',docRef)
     uploadBytes(docRef, file).then((snapshot) => {          
           console.log('snapshot',snapshot)                                     
@@ -148,7 +148,7 @@
     if (blogTitle.value.length !== 0 && blogHTML.value.length !== 0) {  
       loading.value = true          
       if (file.value.name)  {        
-        const docRef = ref1($storage, `documents/BlogCoverPhotos/test/${postStore.blogPhotoName}`)        
+        const docRef = ref1($storage, `documents/BlogCoverPhotos/${postStore.blogPhotoName}`)        
         console.log('docref',docRef)
         try {     
           const snapshot = await uploadBytes(docRef, file.value)

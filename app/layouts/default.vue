@@ -9,10 +9,6 @@
 </template>
 
 <script setup>
-const firebaseUser = useFirebaseUser()
-useHead({
-  titleTemplate: '%s - 울산독수리'
-})
 useSeoMeta({
   title: '도요새탐조단',
   description: '2024년 HPAI및 생물다양성 교육',
@@ -29,6 +25,7 @@ useSeoMeta({
 })
 
 useHead({
+  titleTemplate: '%s - 울산독수리',
   htmlAttrs: {
     lang: 'ko'
   },
