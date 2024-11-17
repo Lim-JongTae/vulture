@@ -27,7 +27,7 @@
               </div>
               <ul class="dropdown_menu">
                 <li><NuxtLink to="/about" class="dropdown_link"><UIcon name="i-heroicons-users-solid" class="w-6 h-6" />단체소개</NuxtLink></li>
-                <li><NuxtLink to="/news" class="dropdown_link"><UIcon name="i-heroicons-newspaper" class="w-6 h-6" />독수리뉴스</NuxtLink></li>
+                <li><NuxtLink to="/newsNotice" class="dropdown_link"><UIcon name="i-heroicons-newspaper" class="w-6 h-6" />독수리뉴스</NuxtLink></li>
                 <li><NuxtLink to="/donation" class="dropdown_link"><UIcon name="heroicons-gift" class="w-6 h-6" />후원하기</NuxtLink></li>
               </ul>
             </li>
