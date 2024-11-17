@@ -47,9 +47,18 @@
   border: 1px grey solid;
   
 }
-/* @media screen and (max-width: 768px) {
-  .color-none{
-    display: none;
-  }  
-} */
+@media screen and (max-width: 1118px) {
+  .move-right {
+  position: absolute;
+  top: 28%;
+  right: 1%;
+}  
+}
+@media screen and (max-width: 450px) {
+  .move-right {
+  position: absolute;
+  top: 29%;
+  right: 15%;
+}  
+}
 </style>

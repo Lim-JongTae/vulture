@@ -4,8 +4,7 @@
       <div class="logo-text">
         <NuxtImg class="logo" src="/logo.png" width="30px" format="Webp" /> 
         <span class="lobster-regular text-3xl ml-2">With</span>
-        <span class="bagel-fat-one-regular text-3xl ml-2">울산독수리</span>
-        
+        <span class="bagel-fat-one-regular text-3xl ml-2">울산독수리</span>        
       </div>
     </NuxtLink>
     <input type="checkbox" id= "check" />
