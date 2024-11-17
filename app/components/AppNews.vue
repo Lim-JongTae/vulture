@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-10 flex-st-st flex-col w-[440px] w-cal p-6 gap-5 dark:bg-gray-500 bg-slate-50 box-sh-maker rounded-2xl cursor-pointer" @click="openSite">
+  <div class="mt-10 flex-st-st flex-col w-[440px] w-cal p-6 gap-5 dark:bg-gray-700 bg-slate-50 box-sh-maker rounded-2xl cursor-pointer" @click="openSite">
     <NuxtLink :to="data.url" target="_blank">
     <div class="w-auto min-h-full rounded-xl ">
-      <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class="w-440 h-[290px] rounded-xl" />
-      <div v-else class="flex-ce-ce w-[440] h-[290px] border rounded-xl text-gray-700 no-img"><span>등록된 이미지가 없습니다.</span></div>     
+      <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class="w-392 h-[260px] rounded-xl img-edit" />
+      <div v-else class="flex-ce-ce border rounded-xl text-gray-800 dark:text-gray-300 no-img"><span class=" mt-40">등록된 이미지가 없습니다.</span></div>     
     </div>
     <div class="flex-ce-ce flex-col w-full">
       <div class="flex flex-ce-st flex-col w-full h-[88px] gap-2">
@@ -70,14 +70,19 @@ const logo = computed(() => {
   word-break: keep-all; 
   /* // 문단으로 끊어져서 줄바꿈 됨 */
 }
+.img-edit {
+  margin: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  
+}
 .no-img {
-  background: url(/logo.png) no-repeat; 
+  background: url(/logo_100.png) no-repeat; 
+  
+  width: 392px;
+  height: 260px;
   background-position: center;
-  min-width: 440px;
-  opacity: 0.5;
-  filter: blur(0.5px);
+  object-fit: cover; 
 }
-.no-img span {
-  color: #fff;
-}
+
 </style>
