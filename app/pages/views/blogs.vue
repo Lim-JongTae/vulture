@@ -2,8 +2,8 @@
   <div class="blog-card-wrap">
     <div class="blog-cards container">
       <div class="toggle-edit mt-30">
-        <span v-show="!editPost">편집하기</span>
-        <input type="checkbox" v-model="editPost" @click="!editPost"/>
+        <span v-show="userStore.pAdmin">편집하기</span>
+        <input type="checkbox" v-model="editPost" @click="!cardStore.editPost"/>
       </div>
       <BlogCard :post="post" v-for="(post, index) in blogPosts" :key="index" class="mt-6" />
     </div>   
@@ -11,7 +11,7 @@
 </template>
 <script setup>
 const cardStore = useGetCardStore()
-
+const userStore = useUsersStore()
 const blogPosts = computed(() => {
   return cardStore.blogPosts 
 })
