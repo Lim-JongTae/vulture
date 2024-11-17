@@ -1,22 +1,21 @@
 <template>
-  <div class="mt-10 flex-st-st flex-col w-[440px] w-cal p-6 gap-5 bg-slate-50 box-sh-maker rounded-2xl cursor-pointer" @click="openSite">
+  <div class="mt-10 flex-st-st flex-col w-[440px] w-cal p-6 gap-5 dark:bg-gray-500 bg-slate-50 box-sh-maker rounded-2xl cursor-pointer" @click="openSite">
     <NuxtLink :to="data.url" target="_blank">
-    <div class="w-[400px] min-h-full rounded-xl ">
-      <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class=" w-96 h-[290px] rounded-xl" />
-      <div v-else class="flex-ce-ce w-full h-[290px] border rounded-xl text-gray-700 no-img"><span>등록된 이미지가 없습니다.</span></div>
-     
+    <div class="w-auto min-h-full rounded-xl ">
+      <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class="w-440 h-[290px] rounded-xl" />
+      <div v-else class="flex-ce-ce w-[440] h-[290px] border rounded-xl text-gray-700 no-img"><span>등록된 이미지가 없습니다.</span></div>     
     </div>
     <div class="flex-ce-ce flex-col w-full">
       <div class="flex flex-ce-st flex-col w-full h-[88px] gap-2">
           <div class="flex flex-ce-st w-full gap-2 ">
-            <img :src="logo" alt="" class="w-[20px] h-[20px] rounded-3xl bg-white" />
-            <span class="notosans-font flex-ce-ce text-sm text-gray-900 font-semibold">{{ data.name }}</span>
+            <img :src="logo" alt="" class="w-[20px] h-[20px] rounded-3xl bg-white dark:bg-gray-500" />
+            <span class="notosans-font flex-ce-ce text-sm text-gray-900 font-semibold dark:text-gray-50">{{ data.name }}</span>
           </div>
           <span class="notosans-font flex-ce-st w-full h-[48px] text-gray-950 overflow-hidden whitespace-normal text-ellipsis text-line dark:text-gray-50">{{ data.title }}</span>
       </div>
       <div class="w-full h-[84px]">
           <span class="w-full h-full text-xs text-gray-700 overflow-hidden text-ellipsis whitespace-normal text-line">
-            <span class="poppins-font">{{ data.content }}</span>
+            <span class="poppins-font dark:text-gray-100">{{ data.content }}</span>
           </span>
       </div>
     </div>
@@ -26,7 +25,7 @@
       </div>
       <div class="flex-ce-st flex-col">
         <span class=" text-xs text-gray-900 dark:text-gray-100">{{ data.author }}</span>
-        <span class="text-xs text-gray-400">{{ dayjs(data.publishedAt).format('YYYY-MM-DD HH:mm:ss') }}</span>        
+        <span class="text-xs text-gray-400 dark:text-gray-50">{{ dayjs(data.publishedAt).format('YYYY-MM-DD HH:mm:ss') }}</span>        
       </div>
     </div>
   </NuxtLink>
