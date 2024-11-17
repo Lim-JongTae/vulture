@@ -3,7 +3,7 @@
     <NuxtLink :to="data.url" target="_blank">
     <div class="w-auto min-h-full rounded-xl ">
       <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class="w-392 h-[260px] rounded-xl img-edit" />
-      <div v-else class="flex-ce-ce border rounded-xl text-gray-800 dark:text-gray-300 no-img"><span class=" mt-40">등록된 이미지가 없습니다.</span></div>     
+      <div v-else class="flex-ce-ce  text-gray-800 dark:text-gray-300 no-img"><span class=" mt-40">등록된 이미지가 없습니다.</span></div>     
     </div>
     <div class="flex-ce-ce flex-col w-full">
       <div class="flex flex-ce-st flex-col w-full h-[88px] gap-2">
@@ -77,9 +77,8 @@ const logo = computed(() => {
   
 }
 .no-img {
-  background: url(/logo_100.png) no-repeat; 
-  
-  width: 392px;
+  background: url(/logo_100.png) no-repeat;   
+  width: 100%;
   height: 260px;
   background-position: center;
   object-fit: cover; 
