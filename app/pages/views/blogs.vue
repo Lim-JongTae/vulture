@@ -1,8 +1,8 @@
 <template>
   <div class="blog-card-wrap">
     <div class="blog-cards container">
-      <div class="toggle-edit mt-30">
-        <span v-show="userStore.pAdmin">편집하기</span>
+      <div class="toggle-edit mt-30" v-show="userStore.pAdmin">
+        <span>편집하기</span>
         <input type="checkbox" v-model="cardStore.editPost" @click="!cardStore.editPost"/>
       </div>
       <BlogCard :post="post" v-for="(post, index) in blogPosts" :key="index" class="mt-6" />
