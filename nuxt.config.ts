@@ -31,11 +31,7 @@ export default defineNuxtConfig({
    },
    runtimeConfig: {
     public: {
-      apiKey: process.env.FIREBASE_API_KEY,
-      authDomain: process.env.FIREBASE_AUTHDOMAIN,
-      databaseURL: process.env.FIREBASE_DATABASEURL,
-      projectId: process.env.FIREBASE_PROJECTID,
-      storageBucket: process.env.FIREBASE_STORAGEBUCKET,
+      apiKey: process.env.FIREBASE_API_KEY,           
       messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
       appId: process.env.FIREBASE_APP_ID,
       measurementId: process.env.FIREBASE_MEASUREMENT_ID
