@@ -6,11 +6,7 @@ import { getFunctions } from "firebase/functions";
 
 export default defineNuxtPlugin((nuxtApp) => {  
   const {
-    apiKey,
-    authDomain,
-    databaseURL,
-    projectId,
-    storageBucket,
+    apiKey,      
     messagingSenderId,
     appId,
     measurementId
@@ -18,10 +14,10 @@ export default defineNuxtPlugin((nuxtApp) => {
   
   const firebaseConfig = {
     apiKey,
-    authDomain,
-    databaseURL,
-    projectId,
-    storageBucket,
+    authDomain: 'ecobest-e49b0.firebaseapp.com',
+    databaseURL: 'https://ecobest-e49b0-default-rtdb.firebaseio.com',
+    projectId: 'ecobest-e49b0',
+    storageBucket: 'ecobest-e49b0.appspot.com',
     messagingSenderId,
     appId,
     measurementId
