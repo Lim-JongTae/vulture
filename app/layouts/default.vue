@@ -10,18 +10,18 @@
 
 <script setup>
 useSeoMeta({
-  title: '도요새탐조단',
-  description: '2024년 HPAI및 생물다양성 교육',
-  ogTitle: '2024년 HPAI & 생물다양성교육',
-  ogDescription: '울산시민과학 도요새탐조단을 중심으로 생물다양성및 조류독감에 관학 교육',    
-  ogImage: 'https://drive.google.com/uc?export=view&id=1hoWt9nZaAhcSl7RY26TrTJuiI0i3QEfY',
-  ogUrl: 'https://drive.google.com/uc?export=view&id=1gEljICTymU-3Tlim8lRp-X9dlrI09pd6',
+  title: 'with Ulsan Vulture',
+  description: '울산독수리 보호및 녹색에너지 교육활동',
+  ogTitle: '울산독수리 보호및 녹색에너지 교육활동',
+  ogDescription: '기후변화협약대응, 생물다양성, 지속가능한개발목표(SDGs)',  
+  ogImage: 'https://photos.app.goo.gl/KN23Psk7u1Un3NMd9',
+  ogUrl: 'https://photos.app.goo.gl/wtrE4a8chFZ21q1j9',
   ogLocale: 'ko_KR',
-  ogSite_name: '울산시민과학단',
-  twitterTitle: '울산시민과학단',
-  twitterDescription: '울산시민과학단',
-  twitterImage: '울산시민과학단',
-  twitterCard: '울산시민과학단'
+  ogSite_name: '울산독수리',
+  twitterTitle: '울산독수리',
+  twitterDescription: '울산독수리',
+  twitterImage: '울산독수리',
+  twitterCard: '울산독수리'
 })
 
 useHead({
