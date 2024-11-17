@@ -15,13 +15,12 @@ export default defineNuxtConfig({
        deep: true
      }
    }
- },
- 
-  unhead: {
-    renderSSRHeadOptions: {
-      omitLineBreaks: false
-    }
-  },
+ }, 
+  // unhead: {
+  //   renderSSRHeadOptions: {
+  //     omitLineBreaks: false
+  //   }
+  // },
 
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true,
