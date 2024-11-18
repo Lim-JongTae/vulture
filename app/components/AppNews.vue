@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-10 flex-st-st flex-col w-[440px] w-cal p-6 gap-5 dark:bg-gray-700 bg-slate-50 box-sh-maker rounded-2xl cursor-pointer" @click="openSite">
+  <div class="card mt-10 flex-st-st flex-col w-[440px] w-cal p-6 gap-5 dark:bg-gray-700 bg-slate-50 box-sh-maker rounded-2xl cursor-pointer" @click="openSite">
     <NuxtLink :to="data.url" target="_blank">
     <div class="w-auto min-h-full rounded-xl ">
       <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class="w-392 h-[260px] rounded-xl img-edit" />
@@ -46,14 +46,11 @@ const props = defineProps({
 const website = computed(() => {  
   try {
     return props.data.url.split("https://").pop().split("/")[0] || ""
-
   } catch (error) {
-    console.log(error)
+   console.log(error)
   }
 })
-const logo = computed(() => {
-  console.log('data', props.data)
-  console.log('url', props.data.url)
+const logo = computed(() => {  
   return `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${website.value}&size=16` 
 })
 
@@ -83,5 +80,4 @@ const logo = computed(() => {
   background-position: center;
   object-fit: cover; 
 }
-
 </style>

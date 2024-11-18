@@ -1,6 +1,6 @@
 <template>
   <div>                
-    <AppNav />    
+    <app-nav-new />    
     <main class=" mt-24">
       <slot />            
     </main>     
@@ -13,18 +13,18 @@ useHead({
   titleTemplate: '%s - 울산독수리'
 })
 useSeoMeta({
-  title: '도요새탐조단',
-  description: '2024년 HPAI및 생물다양성 교육',
-  ogTitle: '2024년 HPAI & 생물다양성교육',
-  ogDescription: '울산시민과학 도요새탐조단을 중심으로 생물다양성및 조류독감에 관학 교육',    
-  ogImage: 'https://drive.google.com/uc?export=view&id=1hoWt9nZaAhcSl7RY26TrTJuiI0i3QEfY',
-  ogUrl: 'https://drive.google.com/uc?export=view&id=1gEljICTymU-3Tlim8lRp-X9dlrI09pd6',
+  title: 'with Ulsan Vulture',
+  description: '울산독수리 보호및 녹색에너지 교육활동',
+  ogTitle: '울산독수리 보호및 녹색에너지 교육활동',
+  ogDescription: '기후변화협약대응, 생물다양성, 지속가능한개발목표(SDGs)',  
+  ogImage: 'https://photos.app.goo.gl/AmUE9f2e75FHvyzw5',
+  ogUrl: 'https://photos.app.goo.gl/BqpTS9GfgvJj43bV9',
   ogLocale: 'ko_KR',
-  ogSite_name: '울산시민과학단',
-  twitterTitle: '울산시민과학단',
-  twitterDescription: '울산시민과학단',
-  twitterImage: '울산시민과학단',
-  twitterCard: '울산시민과학단'
+  ogSite_name: 'With울산독수리',
+  twitterTitle: '울산독수리',
+  twitterDescription: '울산독수리',
+  twitterImage: '울산독수리',
+  twitterCard: '울산독수리'
 })
 
 </script>
