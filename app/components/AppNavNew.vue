@@ -6,8 +6,8 @@
           <div class="nav_title">
             <NuxtLink to="/" class="nav_text">
               <NuxtImg class="nav_logo" src="/logo.png" width="30px" format="Webp"></NuxtImg>
-              <span class="lobster-regular text-3xl ml-2 text-white with-text">With</span>
-              <span class="bagel-fat-one-regular text-3xl ml-2 text-gray-400 ulsan-text">울산독수리</span>
+              <span class="lobster-regular text-3xl ml-2 text-gray-700 with-text">With</span>
+              <span class="bagel-fat-one-regular text-3xl ml-2 text-gray-100 ulsan-text">울산독수리</span>
             </NuxtLink>
           </div>
           <div class="nav_toggle" id="nav-toggle">
@@ -120,9 +120,11 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--black-color);
+  /* background-color: var(--black-color); */
+  background-color: var(--teal);
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: var(--z-fixed);
+  margin-bottom: 1rem;
 }
 /*====================== Nav ====================== */
 .nav {
@@ -401,6 +403,18 @@
   } */
   .profile {
     margin-right: 25px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .with-text {
+    font-size: 0.8rem;
+  }
+  .ulsan-text {
+    font-size: 1.3rem;
+    margin-left: -0.5rem;
+  }
+  .nav_logo {
+    width: 21px;
   }
 }
 @media screen and (max-width: 768px) {

@@ -171,7 +171,7 @@ const handleLoginSubmit = async () => {
 }
 .form1 {
   width: 100%;
-  margin-top: -50px;
+  margin-top: -30px;
 }
 .container1 h1 {
   font-size: 36px;
@@ -371,7 +371,18 @@ const handleLoginSubmit = async () => {
     padding: 20px;
   }
   .toggle-panel h1 {
-    font-size: 30px;
+    font-size: 0;
   }
+  .social-icons .link1 {
+    display: inline-flex;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    margin: 15px 8px;
+}
+
 }
 </style>

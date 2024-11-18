@@ -1,10 +1,10 @@
 <template>
   <div class="blog-wrapper shadow04 no-user">
     <div class="blog-content">
-        <div class=" whitespace-pre-wrap ">          
+        <div class="whitespace-pre-wrap blog-title">          
             <h2 v-if="post.welcomeScreen" class="roboto-font">{{ post.title }}</h2>            
             <h2 v-else class="jua-font">{{ post.blogTitle }}</h2>
-            <p v-if="post.welcomeScreen" class="notossans-font">{{ post.blogPost}}</p>            
+            <p v-if="post.welcomeScreen" class="notossans-font post-title">{{ post.blogPost}}</p>            
             <p class="content-preview notosans-font" v-else v-html="post.blogHTML"></p>
             <NuxtLink class="link link-light font-bold" v-if="!user" to="/auth/login">로그인/회원가입
               <UIcon name="i-heroicons-arrow-long-right-16-solid" class="w-7 h-7 ml-2 dark:invert arrow"/>
@@ -13,8 +13,7 @@
               <NuxtLink class="link disnone text-gray-600"  :to="`/detailBlog/${post.id}`">
                 게시물 보기
               </NuxtLink>                                       
-            </div>                 
-                                              
+            </div>   
         </div>
     </div>
         <div class="blog-photo">
@@ -76,9 +75,9 @@ p {
 .link-light {
   @apply hover:border-b-slate-500
 }
-.blog-photo {
+/* .blog-photo {
   @apply order-1 flex-[3] w-full
-}
+} */
 .img {
   @apply block h-full w-full object-cover ml-14
 }
@@ -122,6 +121,33 @@ p {
   }
   .blog-photo {
     flex: 4;
+  }
+}
+@media screen and (max-width: 400px) {  
+.blog-photo {
+    padding: 0 0;
+    order: 1;
+    flex: 3;
+    width: 100%;
+  }
+  .whitespace-pre-wrap {
+    padding: 0 0;
+  }
+  .disnone {
+    padding: 0 0;;
+}
+  .blog-photo .img:hover {
+    transform: scale(1.1);
+  }
+  .blog-title {
+    margin-top: 0;
+  }
+  .blog-wrapper {
+    padding: 1.5rem 1.6rem;
+    min-height: 50%;    
+  }
+  .post-title {
+    font-size: 0.8rem;
   }
 }
 </style>

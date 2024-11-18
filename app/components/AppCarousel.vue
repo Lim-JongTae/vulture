@@ -17,8 +17,10 @@ function videoslider(links) {
 
 <style scoped>
 .container {
-  width: 90%;
-  height: 100%;  
+  margin-top: 1rem; 
+  margin-bottom: 1rem;
+  width: 80%;
+  height: 80%;  
   border-radius: 10px;
   box-shadow: 1px 5px 1px 1px;
   position: relative;
