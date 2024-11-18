@@ -60,36 +60,39 @@ export default defineNuxtConfig({
     componentName: 'MdiIcon',
     defaultSize: '1rem'
   },
-  head: {
-    title: '%s - 울산독수리',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },     
-      { 
-        hid: 'description',
-        name: 'description', 
-        content: '울산독수리 보호및 녹색에너지 교육활동' 
-      },
-      { 
-        hid: 'og:title',
-        property:'og:title',
-        content: '함께해요~~울산독수리 보호및 생물다양성 지킴이활동' 
-      },
-      { 
-        hid: 'og:description',
-        property:'og:description',
-        content: '기후변화협약대응, 생물다양성, 지속가능한개발목표(SDGs)' 
-      },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: 'pbulic/og.jpg',
-      },
-      {
-        hid: 'og:url',
-        property: 'og:url',
-        content: 'https://울산독수리.com',
-      },
-    ]  
+  app: {
+    head: {
+      title: '%s - 울산독수리',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },     
+        { 
+          hid: 'description',
+          name: 'description', 
+          content: '울산독수리 보호및 녹색에너지 교육활동' 
+        },
+        { 
+          hid: 'og:title',
+          property:'og:title',
+          content: '함께해요~~울산독수리 보호및 생물다양성 지킴이활동' 
+        },
+        { 
+          hid: 'og:description',
+          property:'og:description',
+          content: '지속가능한개발목표(SDGs),생물다양성,기후변화대처' 
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: 'https://github.com/Lim-JongTae/vulture/blob/main/public/og_2.jpg?raw=true',
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: 'https://울산독수리.com',
+        },
+          
+      ]  
+    }
   }
 })

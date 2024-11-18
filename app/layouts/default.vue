@@ -12,9 +12,9 @@
 useSeoMeta({
   title: 'with Ulsan Vulture',
   description: '울산독수리 보호및 녹색에너지 교육활동',
-  ogTitle: '울산독수리 보호및 녹색에너지 교육활동',
-  ogDescription: '기후변화협약대응, 생물다양성, 지속가능한개발목표(SDGs)',  
-  ogImage: 'pbulic/og.jpg',
+  ogTitle: 'With 울산독수리',
+  ogDescription: '지속가능한개발목표(SDGs),생물다양성,기후변화대처',  
+  ogImage: 'https://github.com/Lim-JongTae/vulture/blob/main/public/og_2.jpg?raw=true',
   ogUrl: 'https://울산독수리.com',
   ogLocale: 'ko_KR',
   ogSite_name: 'With울산독수리',
