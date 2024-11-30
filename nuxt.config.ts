@@ -16,6 +16,17 @@ export default defineNuxtConfig({
      }
    }
  }, 
+
+ app: {
+  head: {
+    link: [
+      {
+        rel: 'manifest',
+        href: '/manifest.webmanifest'
+      }
+    ]
+  }
+ },
   // unhead: {
   //   renderSSRHeadOptions: {
   //     omitLineBreaks: false

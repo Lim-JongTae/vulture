@@ -1,0 +1,380 @@
+
+[
+  {
+    "id": 1,
+    "name": "KBS뉴스",
+    "author": "황수경 앵커",
+    "title": "독수리를 보호하자",
+    "description": "시베리아로 돌아가지 않고 한달째 경기도 파주에 머물고 있는 검독수리 수십마리가 큰 위험에 처해 있습니다.",
+    "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=3785293",
+    "urlToImage": "",
+    "publishedAt": "1998-04-08 21:00",
+    "content": "[동영상]자율방범대원들과 조류협회 회원들이 나서 먹이를 주며 감시했습니다. 닭들을 들판에 던져 놓자 독수리떼가 모여들어 다투어 먹어치웁니다."
+  },
+  {
+    "id": 2,
+    "name": "동아사이언스",
+    "author": "",
+    "title": "한국 독수리는 왜 썩은 고기를 먹나",
+    "description": "한국과 미국 간 협력으로 독수리의 이동 경로를 밝히는 것이 중요하다고 전문가들이 강조했다.",
+    "url": "https://m.dongascience.com/news.php?idx=8439",
+    "urlToImage": "http://image.dongascience.com/Photo/2015/10/14454316670444[1].jpg",
+    "publishedAt": "2015-10-21 18:00",
+    "content": "한국 독수리가 생김새는 미국 흰머리 수리를 닮았지만 썩은 고기를 먹는 습관만은 미국 칠면조 독수리와 비슷한 이유가 밝혀졌다."
+  },
+  {
+    "id": 3,
+    "name": "한겨례",
+    "author": "조홍섭기자",
+    "title": "‘순한 청소동물’ 독수리는 왜 동료를 잡아먹었나",
+    "description": "지난해 1월 17일 오후 3시께 강승구 국립생물자원관 박사는 전남 해남군 금호호 주변에서 겨울 철새를 조사하고 있었다. 독수리 다섯 마리가 하늘을 선회하다 갈대밭으로 내려앉았다. 무언가 먹이가 있다는 뜻이다",
+    "url": "https://www.hani.co.kr/arti/animalpeople/ecology_evolution/862739.html",
+    "urlToImage": "https://flexible.img.hani.co.kr/flexible/normal/970/646/imgdb/resize/2018/0919/00501365_20180919.JPG",
+    "publishedAt": "2019-10-19 11:23",
+    "content": "독수리 한 마리가 갈대밭에 누워 날개를 편 채 양발을 공중으로 뻗어 방어 자세를 취하면서 내는 소리였다. 동료 독수리 3마리가 누운 독수리를 발로 찍어누르며 부리로 쪼아댔다."
+  },
+  {
+    "id": 4,
+    "name": "",
+    "author": "부정석",
+    "title": "뉴스데스크 부정석기자 이미지 부정석 '귀한 손님이었는데'…눈칫밥 먹는 독수리",
+    "description": "천연기념물이자 멸종위기종인 독수리가 우리나라 주요 월동지인 경남 고성을 찾아 겨울 나기에 들어갔습니다.",
+    "url": "https://imnews.imbc.com/replay/2019/nwdesk/article/5636385_28802.html",
+    "urlToImage": "",
+    "publishedAt": "2019-12-08 20:30",
+    "content": "[동영상]3미터 넘는 날개를 편 하늘의 제왕 독수리가 먹이 찾기 비행에 나섰습니다."
+  },
+  {
+    "id": 5,
+    "name": "연합뉴스",
+    "author": "김수현 기자",
+    "title": "영국서 들여온 멸종위기 검독수리 새 식구 생겼다…번식 성공",
+    "description": "환경부 산하 국립생태원은 2013년 영국에서 도입한 멸종위기 야생생물 1급 검독수리의 아종 한 쌍이 최근 번식에 성공했다고 7일 밝혔다.",
+    "url": "https://www.yna.co.kr/view/AKR20200507068400004",
+    "urlToImage": "https://img8.yna.co.kr/etc/inner/KR/2020/05/07/AKR20200507068400004_01_i_P4.jpg",
+    "publishedAt": "2020-05-07 12:00",
+    "content": "아종은 생물 분류학상 종의 하위 단계로, 동일한 종에서 주로 지리적으로 차이를 지니는 집단이 인정될 때 사용하는 용어다.검독수리는 전 세계적으로 아종 6개가 존재하는데, 국립생태원에서 보유하는 개체는 유럽 아종이다"
+  },
+  {
+    "id": 6,
+    "name": "여행신문",
+    "author": "김정흠 기자",
+    "title": "몽골에서 고성까지 3,000km 독수리가 날아오는 이유",
+    "description": "고성에 독수리가 찾아왔다. 그것도 떼로.몽골에 사는 독수리가 23년간 고성을 찾는 구구절절한 사연.)",
+    "url": "https://www.traveltimes.co.kr/news/articleView.html?idxno=111327",
+    "urlToImage": "https://cdn.traveltimes.co.kr/news/photo/202102/111327_8634_1035.jpg",
+    "publishedAt": "2021-02-23 11:13",
+    "content": "저 멀리 보이는 북쪽 끝 산봉우리의 꼭대기, 지역 주민들이 연지산이라고 부르는 산의 정상 위로 검은 점 서너 개가 빙빙 돈다. 시간이 조금 더 지나자 이제는 수십 개의 점이 저마다의 규칙으로 움직인다. 숫자는 점점 많아진다."
+  },
+  
+  {
+    "id": 7,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사 ⓛ] 독수리 '고성이'의 슬기로운 이동 생활",
+    "description": "'봉순이'에 이어 '고성이'의 야생동물 스토리 기대고성이와 몽골이와의 특별한 인연 고성이와 몽골이의 다른 여정과 운명올겨울, 다시 경남 고성에 올 수 있을까?",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=257743#google_vignette",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202109/257743_273461_5110.jpg",
+    "publishedAt": " 2021-09-29 13:43",
+    "content": "작년에 탈진한 독수리를 구조하여 올해 경남 고성에서 야생동물위치추적기(gps)를 부착한 독수리 '고성이'와 '몽골이'의 이동경로. 9월말 현재 몽골에 머물고 있다"
+  },
+  {
+    "id": 8,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사 ②] 한국의 독수리식당과 독수리아빠, 멸종위기 독수리를 지킨다!",
+    "description": "인위적인 독수리 먹이제공, 독수리식당파주시의 독수리식당은 유일하게 가축 폐사체를 통째로 제공 경상남도 독수리식당은 고성 본점과 분점의 상생 운영",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=257914",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202109/257914_273550_3751.jpg",
+    "publishedAt": "2021-09-30 12:38",
+    "content": "​파주시 장단반도에 위치한 '독수리식당(Vulture Restaurant)'. 이 식당도 토지 소유 관계로 인접한 지역으로 이동했다. 장단반도는 민통선 지역으로 민간인의 자유로운 접근이 제한되는 곳이라서 독수리 월동지로서 천혜의 조건을 갖추고 있다."
+  },
+  {
+    "id": 9,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사 ③] 몽골, 유라시아에 사는 독수리에게 가장 좋은 번식지",
+    "description": "유목국가, 몽골은 독수리 개체군 유지에 가장 완벽한 국가높은 바위 암벽을 선호하는 독수리 올겨울 찾아오는 독수리들의 번식지 관련 영상 공유",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=257918#google_vignette",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202109/257918_273364_3727.jpg",
+    "publishedAt": "2021.09.30 16:53",
+    "content": "몽골국립교육대학교 온노(G. Onolragchaa) 교수는 “몽골에서 지난 4월에 태어난 새끼들은 이제 둥지를 박차고 나갔다”고 알려 왔다."
+  },
+  {
+    "id": 10,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사 ④] 청소동물 禿수리가 대머리가 된 이유와 강력한 위액이 필요한 이유?",
+    "description": "독수리는 대머리?환경위생과 온도적응, 그리고 의사소통에 필요했던 대머리수염수리, 뼈조차 녹여버리는 강력한 위액독수리의 생태계서비스, 전염병 확산 방지",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=257929#google_vignette",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202109/257929_273631_4836.jpg",
+    "publishedAt": " 2021.09.30 20:48",
+    "content": "독수리의 ‘禿’자는 대머리란 말이며, 대머리수리와 동일한 의미를 갖는다. ‘대머리독수리’란 중복 의미를 가지기 때문에 정확한 단어는 아니다."
+  },
+  {
+    "id": 11,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사 ⑤] 독수리가 없는 세상은 인간이 살 수 없다.",
+    "description": "경기도 파주에서 이차중독으로 죽은 독수리 폐사체들(2010년). 과거에 비해 우리나라는 이런 독극물 사건이 감소하거나 규모가 작지만, 아시아와 아프리카는 여전히 대규모로 진행중이다.",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=257925",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202109/257925_273387_3619.jpg",
+    "publishedAt": "2021.10.05 09:07",
+    "content": "‘탄광의 카나리아’는 갱도 안의 일산화탄소에 민감하게 반응하는 카나리아가 새장 바닥으로 떨어지면, 갱도 내의 위독 가스가 퍼졌다는 신호로 광부들에게 위험을 알려준다는 의미로 사용하는 말이다."
+  },
+  {
+    "id": 12,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사 ⑥] 독수리와 인간의 공존을 위한 동화",
+    "description": "금산에도 매년 겨울에 독수리를 볼 수 있습니다. 인삼밭 주변의 논에 뿌려진 거름흙에서 먹이를 찾는 독수리로 여러 언론사에서도 관심을 가졌습니다'라며 금산지구별그림책마을 박정은 관장은 금산도 독수리와 깊은 관련이 있다고 밝혔다.",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=257931",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202109/257931_273383_2140.jpg",
+    "publishedAt": "2021-09-30 23:45",
+    "content": "독수리 표본을 그림책도서관에 설치해서 아이들에게 보여줬더니, 너무 좋아하더군요. 다른 맹금류와 비교한 강의도 좋아했고요"
+  },
+  {
+    "id": 13,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사⑦] 몽골로 갔던 '고성이'와 '몽골이' 건강하게 귀환",
+    "description": "올 4월에 몽골로 갔던 미성숙 독수리 개체가 10월과 11월에 경남에 도착3개월간 야생동물 추적 데이터가 끊겼던 몽골이도 무사 귀환 현재 고성군은 독수리 생태축제 중",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=261399#google_vignette",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202112/261399_278707_4750.jpg",
+    "publishedAt": " 2021-12-09 18:43",
+    "content": "작년 말에 구조되어 올 2월에 국내 독수리 월동지에서 방사됐던 독수리 2개체가 태어난 몽골로 귀향했다가 건강한 모습으로 국내 독수리 월동지로 다시 돌아왔다"
+  },
+  {
+    "id": 14,
+    "name": "굿모닝충청",
+    "author": "백인환 기자",
+    "title": "[청소동물 독수리AR탐사⑧] 무속과 미신으로 사라지는 독수리",
+    "description": "아프리카 독수리 11종 중 7종이 심각한 멸종 위기 지난 50년간 독수리 개체수 80~97% 감소 독수리의 긍적적인 이미지가 오히려 멸종 감소",
+    "url": "https://www.goodmorningcc.com/news/articleView.html?idxno=263772",
+    "urlToImage": "https://cdn.goodmorningcc.com/news/photo/202201/263772_282005_2452.jpg",
+    "publishedAt": "2022-01-27 10:04",
+    "content": "최근 몇 년 동안 아프리카 전역의 독수리 개체수가 급격히 감소했다"
+  },
+  {
+    "id": 15, 
+    "name": "SBS뉴스", 
+    "author": "이용식 기자",
+    "title": "'돼지뼈' 먹이에 십시일반…독수리 낙원 된 천수만 / SBS 8뉴스",
+    "description": "겨울 철새 도래지인 천수만 간척지에 천연기념물인 귀한 새들이 날아들고 있습니다. 특히 상인들이 주는 먹이 덕분에 '독수리'의 개체 수가 늘었습니다.그 현장을 이용식 기자가 다녀왔습니다.",
+    "url": "https://youtu.be/EMoOm7u6hus?si=el4ntXRWKvEdoGai",
+    "urlToImage": "",
+    "publishedAt": "2023-11-26 00:00",
+    "content": "[youtube]번식지가 러시아 남동부 지역인 흑두루미도 추위를 피해 어김없이 찾아왔습니다.농로에 뿌려준 볍씨는 2t, 수천 km를 날아온 흑두루미 600여 마리에게는 고마운 먹이터입니다." 
+  },
+    { "id": 16, 
+      "name": "경상일보",
+      "author": "김동수기자",
+      "title": "겨울나기 하러 울산 온 몽골 독수리들",
+      "description": "겨울을 나기 위해 울산을 찾은 천연기념물이자 멸종위기종 2급인 독수리들이 4일 울산 울주군 범서읍 입암리 들판에서 먹이활동을 하고 있다.",
+      "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=986449",
+      "urlToImage": "https://cdn.ksilbo.co.kr/news/photo/202312/986449_573148_1430.jpg",
+      "publishedAt": "2023-12-05 00:10",
+      "content": "겨울을 나기 위해 울산을 찾은 천연기념물이자 멸종위기종 2급인 독수리들이 4일 울산 울주군 범서읍 입암리 들판에서 먹이활동을 하고 있다. 몽골에서 3400㎞를 날아온 독수리들은 내년 3월께 다시 몽골로 돌아간다. 울산에서 독수리 보호활동을 하고 있는 녹색에너지포럼은 울산의 생태환경이 좋아져 다양한 철새들이 울산을 찾는다고 분석했다."
+    },  
+  {
+    "id": 17,
+    "name": "울산매일",
+    "author": "강태아 기자",
+    "title": "울산시, 떼까마귀 · 독수리 등 활용 ‘조류 사파리’ 추진",
+    "description": "태화강 국가정원 등 관광자원화 김두겸 시장, 관련 부서에 지시 '실패 사례 있어 세밀한 접근 필요'",
+    "url": "https://www.iusm.co.kr/news/articleView.html?idxno=1031200",
+    "urlToImage": "https://cdn.iusm.co.kr/news/photo/202401/1031200_579981_409.jpg",
+    "publishedAt": "2024-01-02 18:23",
+    "content": "울산시가 겨울이면 태화강 등을 찾고 있는 떼까마귀와 독수리를 활용한 조류 사파리 추진에 나선다. 여름철이면 백로가, 겨울에는 떼까마귀 등이 찾는 태화강 국가정원 등을 탐조관광자원으로 활용하겠다는 것이다."
+  },
+  {
+    "id": 18, 
+    "name": "울산경제신문", 
+    "author": "주하연 기자",
+    "title": "독수리 손님이 매년 찾는 ‘특별한 식당",
+    "description": "몽골에서 3,400km를 날아 울산 울주군 범서읍 입암들에 도착한 독수리.",
+    "url": "https://www.ulkyung.kr/news/articleView.html?idxno=36029",
+    "urlToImage": "https://cdn.ulkyung.kr/news/photo/202401/36029_33786_2642.jpeg",
+    "publishedAt": "2024-01-03 22:00",
+    "content": "멸종위기종 시민인식 개선 차원13일부터 ‘독수리 학교’도 개교 토요일마다 먹이주기 체험 진행" 
+  },  
+  {
+    "id": 19,
+    "name": "JCN news",
+    "author": "라경훈 기자",
+    "title": "겨울철만 되면 수백 마리의 독수리가 울산을 찾아온다는 사실, 알고 계시나요?",
+    "description": "이에 울산시가 울산을 찾는 독수리들의 먹이 지원에 나섭니다.",
+    "url": "https://youtu.be/lB6rs0H8hYM",
+    "urlToImage": "",
+    "publishedAt": " 2024-1-17 00:00",
+    "content": "[youtube]녹색에너지촉진시민포럼 사무국장 독수리 식당을 하면서 이렇게 먹이를 구하는 일이 여러 가지 어려운 점이 많습니다. 이런 차원에서 시에서 이렇게 일정한 양의 먹이를 지원해 줌으로 해서 식당의 안정적인 운영이 가능하게."
+  },
+  {
+    "id": 20,
+    "name": "연합뉴스",
+    "author": "장지현 기자 ",
+    "title": "겨울나러 울산 입암들 찾은 독수리 떼에 먹이 3천여㎏ 공급",
+    "description": "울산시는 겨울을 나기 위해 울주군 입암들을 찾아온 독수리 떼에 먹이를 공급한다고 17일 밝혔다.",
+    "url": "https://www.yna.co.kr/view/AKR20240117009200057",
+    "urlToImage": "https://img9.yna.co.kr/photo/cms/2023/05/27/22/PCM20230527000022065_P4.jpg",
+    "publishedAt": "2024-01-17 06:28",
+    "content": "시는 독수리 생육 상태와 개체 수 등을 점검해 향후 먹이 및 생태체험장도 운영한다는 계획이다. 기존에는 시민단체 녹색에너지시민촉진포럼이 기업·시민 후원으로 독수리 먹이 주기 활동을 펼쳐왔으나 최근 예산 부족 등으로 어려움을 겪었다.."
+  },
+  {
+    "id": 21,
+    "name": "경상일보",
+    "author": "차형석 기자 ",
+    "title": "울산 찾은 독수리떼에 3월까지 먹이 준다",
+    "description": "먹이 부족해 독수리 크게 줄자 시, 소·돼지 부산물 공급키로 향후 생태체험장 운영도 추진",
+    "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=990023",
+    "urlToImage": "https://cdn.ksilbo.co.kr/news/photo/202401/990023_576286_3710.jpg",
+    "publishedAt": "2024-01-18 00:10",
+    "content": "울산시는 겨울을 나기 위해 울주군 입암들을 찾아온 독수리 떼에 오는 3월까지 먹이를 공급한다고 17일 밝혔다."
+  },
+
+  {
+    "id": 22,
+    "name": "남해안신문",
+    "author": "강성훈 기자",
+    "title": "광양에서 발견된 미국 독수리(?) 화제",
+    "description": "광양에서 구조된 독수리가 미국 출신이라는 주장에 대해 전문가들이 의견을 제시했다.",
+    "url": "https://www.nhanews.com/news/articleView.html?idxno=80570",
+    "urlToImage": "https://cdn.nhanews.com/news/photo/202401/80570_28015_5130.jpg",
+    "publishedAt": " 2024-01-30 17:52",
+    "content": "미국 덴버동물원의 인식표가 부착된 독수리가 광양의 한 밭에서 발견돼 화제다."
+    },
+  {
+    "id": 23, 
+    "name": "SBS뉴스", 
+    "author": "이용식 기자",
+    "title": "야생 조류를 잡기 위해 농약 묻은 먹이를 살포하는 불법 행위가 끊이지 않고 있습니다./ SBS 8뉴스",
+    "description": "날개에 번호표가 달린 이 개체는 지난해 농약 중독으로 구조돼 치료를 받고 야생으로 돌아갔지만, 다시 사고를 당했습니다.",
+    "url": "https://www.youtube.com/watch?v=BPHstZN9lm4",
+    "urlToImage": "",
+    "publishedAt": "2024-1-21 00:00",
+    "content": "[youtube 뉴스]"
+  },
+  {
+    "id": 24, 
+    "name": "뉴스펭귄", 
+    "author": "남주원 기자",
+    "title": "'뉴스는 산으로...' 핫이슈 광양 독수리 진실",
+    "description": "미국 동물원 인식표를 단 독수리가 전남 광양에서 구조돼 화제가 된 가운데 오보에 대한 염려의 목소리가 나왔다.",
+    "url": "https://www.newspenguin.com/news/articleView.html?idxno=15962",
+    "urlToImage": "https://cdn.newspenguin.com/news/photo/202401/15962_48964_252.jpg",
+    "publishedAt": "2024-01-31 11:15",
+    "content": "30일 다수의 국내매체는 미국 덴버동물원 인식표가 부착된 독수리가 전남 광양에서 다친 채 발견됐다고 보도했다. 이 같은 내용 자체는 사실이나 독수리가 미국에서부터 광양까지 날아온 것은 사실이 아니다." 
+  },
+    { "id": 25, 
+      "name": "연합뉴스",
+      "author": "김근주", 
+      "title": "겨울이면 독수리도 찾아오는 울산…'조류 사파리' 운영키로",
+      "description": "StackSocial's 74%-off deal on this Grade A refurbished Apple laptop is a true steal.",
+      "url": "https://www.yna.co.kr/view/MYH20240224005700641",
+      "urlToImage": "",
+      "publishedAt": "2024-02-24 12:47",
+      "content": "[동영상]떼까마귀의 월동지로 유명한 울산에는 독수리도 수천킬로미터를 날아와 겨울을 나고 있습니다."
+  },
+  {
+    "id": 26,
+    "name": "에코저널",
+    "author": "남귀순 기자",
+    "title": "자연의벗연구소 한·몽 포럼, ‘독수리를 지키는 사람들’",
+    "description": "독수리의 몽골 번식지 상황과 한국의 월동지 상황을 공유하고, 보호 방안을 논의하는 자리가 마련됐다.",
+    "url": "https://www.ecojournal.co.kr/m/view.php?idx=149539",
+    "urlToImage": "https://www.ecojournal.co.kr/data/cheditor4/2403/656177c51e5f431acf8c9d86750201b753f0ca41.jpg",
+    "publishedAt": "2024-03-19 16:03:44",
+    "content": "지난 15일 서울 마포구에 위치한 청년문화공간JU 동교점에서 제3차 자연의벗 멸종위기종 포럼, ‘한국몽골포럼 <독수리를 지키는 사람들>’이 개최됐다. 포럼 참가자는 약 130명이다."
+  },
+  {
+    "id": 27,
+    "name": "문화일보",
+    "author": "박준우 기자",
+    "title": "독수리도 피해가는 우크라이나... 철새 이동경로 전쟁 전후 바뀌었다",
+    "description": "이전보다 85㎞ 더 이동새들 번식에 영향 가능성",
+    "url": "https://munhwa.com/news/view.html?no=2024052201039910274008",
+    "urlToImage": "https://image.munhwa.com/gen_news/202405/2024052201039910274008_b.jpg?v=20241117134524",
+    "publishedAt": "2024-05-22 09:55",
+    "content": "우크라이나 전쟁이 3년째를 맞은 가운데 멸종위기종 철새인 항라머리검독수리가 이동 경로에서 우크라이나 지역을 배제하고 있는 것으로 나타났다."
+  },
+  {
+    "id": 28,
+    "name": "문화일보",
+    "author": "박준우 기자",
+    "title": "독수리 없어지니 사람 50만 명이 죽었다… 복원에 달려든 이 나라",
+    "description": "최근 인도에서 멸종 위기에 놓인 독수리의 개체수 감소가 인도에서 약 50만여 명의 사망에 영향을 미쳤다는 연구 결과가 나왔다.",
+    "url": "https://www.munhwa.com/news/view.html?no=2024072601039910274009",
+    "urlToImage": "https://image.munhwa.com/gen_news/202407/2024072601039910274009_b.jpg?v=20241117142314",
+    "publishedAt": "2024-07-26 22:20",
+    "content": "인도 정부는 독수리 보호 및 복원에 나서고 있지만 성과가 나올지는 미지수다. 지난해 서부 벵골 지역의 한 호랑이 보호구역에서 포획되어 사육되다가 위성 태그를 부착하고 구조된 20마리의 독수리가 방생됐다. "
+  },
+  {
+    "id": 29, 
+    "name": "BBC NEWS 코리아", 
+    "author": "",
+    "title": "인도에서 '독수리' 감소가 50만 명의 인명 피해를 가져온 이유",
+    "description": "옛날 인도에선 독수리가 매우 흔했다. 이 새들은 주로 쓰레기 매립지에서 소의 사체를 찾아다니며 사냥했다. 그러나 약 20년 전, 병든 소를 치료하기 위해 사용된 약물 때문에 독수리들이 죽기 시작했다.",
+    "url": "https://www.bbc.com/korean/articles/c9r32ev2ye5o",
+    "urlToImage": "https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/e9cc/live/377630d0-4bd3-11ef-aebc-6de4d31bf5cd.jpg.webp",
+    "publishedAt": "2024-7-27 00:00",
+    "content": "'디클로페낙'이라는 저렴한 소염진통제가 독수리에게는 치명적이었고, 이 약물이 들어있는 소의 사체를 먹은 독수리들은 신장 부전으로 사망했다. 2006년에 이 약물 사용이 금지된 후에도 세 종의 독수리 개체수는 91~98% 감소했다." 
+  },
+  {
+    "id": 30, 
+    "name": "한국일보", 
+    "author": "고은경 기자",
+    "title": "몽골이 낳고 한국이 기르는 독수리들… '떼죽음 막기 위한 노력 절실'",
+    "description": "천연기념물이자 멸종위기종 독수리 보호 위해20년 이상 노력해 온 김덕성, 노영대씨 인터뷰",
+    "url": "https://www.hankookilbo.com/News/Read/A2024080616050004603?did=NA",
+    "urlToImage": "https://newsimg-hams.hankookilbo.com/2024/08/06/34b7543b-0019-4a65-96df-a23cb74501b0.jpg",
+    "publishedAt": "2024-08-07 07:00",
+    "content": "몽골이 낳고 한국이 기른다. 천연기념물이자 멸종위기종 2급인 독수리 얘기다. 겨울을 나기 위해 몽골에서 3,000㎞를 날아오는 새끼 독수리들을 보호하기 위해 20년 이상 힘써온 이들이 있다" 
+  },
+  {
+    "id": 31, 
+    "name": "뉴스펭귄", 
+    "author": "이동재 기자 ",
+    "title": "약물 때문에 97% 사라진 이 독수리 이젠 널뛰는 날씨가...",
+    "description": "기후변화로 가는부리독수리(Slender-billed Vulture) 서식지가 줄어 멸종이 가속화될 수 있다는 경고가 나왔다. 이미 심각한 멸종위기종인 이 새들의 서식지 분포와 기후 요소의 상관 관계를 연구한 과학자들이 내린 결론이다.",
+    "url": "https://www.newspenguin.com/news/articleView.html?idxno=18077",
+    "urlToImage": "https://cdn.newspenguin.com/news/photo/202411/18077_53107_253.jpg",
+    "publishedAt": "2024-11-08 12:08",
+    "content": "IUCN은 디클로페낙을 멜록시캄(meloxicam)같은 비교적 안전한 대체 약물로 대체하고, 독수리 안전 구역 등을 설정해 독수리가 안전하게 서식할 수 있는 환경을 제공해야 한다고 밝혔다." 
+  },
+  {
+    "id": 32, 
+    "name": "연합뉴스", 
+    "author": "김선영 기자",
+    "title": "올해도 김해 화포천습지 찾은 천연기념물 독수리·재두루미",
+    "description": "시, 철새 휴식공간 마련 위해 매년 먹이주기 사업 시행 중",
+    "url": "https://www.yna.co.kr/view/AKR20241115097500052",
+    "urlToImage": "https://img9.yna.co.kr/etc/inner/KR/2024/11/15/AKR20241115097500052_02_i_P4.jpg",
+    "publishedAt": "2024-11-15 14:29",
+    "content": "경남 김해를 대표하는 생태관광자원인 화포천습지에 올해도 독수리와 재두루미가 날아들었다." 
+  },
+  {
+    "id": 33, 
+    "name": "경남뉴스투에이", 
+    "author": "정소영 기자",
+    "title": "독수리, 재두루미 화포천 다시 찾아와",
+    "description": "김해시는 독수리 6마리, 재두루미 12마리가 한림면 화포천습지를 찾아왔다고 15일 밝혔다.",
+    "url": "http://www.knnewstoday.co.kr/news/articleView.html?idxno=212742",
+    "urlToImage": "http://www.knnewstoday.co.kr/news/thumbnail/202411/212742_228220_5641_v150.jpg",
+    "publishedAt": "2024-11-15 15:57",
+    "content": "이용규 환경정책과장은 “매년 수많은 철새들이 화포천을 다시 찾아와 준 것이 고맙다”며 “지속적으로 독수리, 재두루미 외에도 다양한 철새들의 보금자리가 될수 있도록 화포천습지 보전을 위해 최선을 다하겠다”고 말했다." 
+  },  
+  {
+    "id": 34, 
+    "name": "연합뉴스", 
+    "author": "허광무 기자",
+    "title": "'울산 찾는 철새, 우리도 있어요'…올해는 독수리 60마리 발견",
+    "description": "16일 17마리 첫 관찰 후 개체 늘어…녹색에너지포럼, 주 2회 먹이 공급.",
+    "url": "https://www.yna.co.kr/view/AKR20241119133700057",
+    "urlToImage": "https://img4.yna.co.kr/photo/yna/YH/2024/11/19/PYH2024111917960005700_P4.jpg",
+    "publishedAt": "2024-11-19 17:21",
+    "content": "19일 오후 울산시 울주군 범서읍 입암들에서 월동을 위해 울산을 찾은 까마귀 떼가 관찰됐다. 2024.11.19 [녹색에너지촉진시민포럼 제공" 
+  }  
+  ]
+
+
+
