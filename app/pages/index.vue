@@ -8,7 +8,10 @@
       <div class="container">
         <h3>최근 블로그 소식</h3>
         <div class="blog-cards">
-          <blog-card :post="post" v-for="(post, index) in blogPostsCards" :key="index" />
+          <blog-card :post="post" v-for="(post, index) in cardStore.blogPosts" :key="index" />
+        </div>
+        <div class="text-center">
+          <UButton class="mt-10" @click="handleClick">더 보기</UButton>
         </div>
       </div>
     </div>                 
@@ -20,8 +23,7 @@
           </UButton>
           <UButton v-else trailing size="xl" to="/donation" icon="i-heroicons-arrow-long-right-solid" color="lime" class="router-button-1 mb-4 rounded-full text-slate-900 font-bold flex mr-10 jua-font">
             후 원 하 기    
-          </UButton>
-       
+          </UButton>       
       </div>
     </div>
   </div>
@@ -33,14 +35,17 @@ const cardStore = useGetCardStore()
 
 const { sampleBlogPost, welcomeScreen } = storeToRefs(postStore)
 const { pEmail } = useUsersStore()
-const blogPostsCards = computed(() => {
-  return cardStore.blogPostsCards
-})
+// const blogPostsCards = computed(() => {
+//   return cardStore.blogPostsCards
+// })
+const handleClick = () => {  
+  cardStore.getNext()
+}
 </script>
 
 <style scoped>
 .blog-card-wrap h3 {
-  @apply text-xl font-semibold mb-8
+  @apply text-xl font-semibold mb-8;
 }
 h2 {
   font-weight: bold;
@@ -71,8 +76,7 @@ h2 {
 }
 }
 @media screen and (max-width: 400px) { 
- 
-  blog-card-wrap {
+    blog-card-wrap {
     margin-top: 10rem;
     padding-bottom: 0;
   }

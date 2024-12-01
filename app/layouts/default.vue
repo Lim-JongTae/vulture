@@ -32,7 +32,7 @@ useHead({
   link: [
     {
       rel: 'icon',
-      type: 'image/png',
+      type: 'image/ico',
       href: '/favicon.ico'
     }
   ]

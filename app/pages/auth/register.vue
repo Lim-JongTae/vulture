@@ -28,38 +28,33 @@
       <Loading v-if="loading" />
       <div class="angle"></div>
       </form>
-    <div class="background">fff</div>
+    <div class="background"></div>
   </div>
 </template>
-<script>
+<script setup>
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { setDoc, doc } from 'firebase/firestore';
 const toast = useToast()
-export default {
-  data() {
-    return {
-      username: '',
-      email:'' ,
-      password: '',
-      rePassword: '',    
-      error: true,
-      errorMsg: '',
-      loading: null
-    }
-  },
-methods: {
-  async register() {
+const username = ref('')
+const email = ref('')
+const password = ref('')
+const rePassword = ref('')
+const error = ref(true)
+const errorMsg = ref('')
+const loading = ref(null)
+
+
+const register = async () => {   
     const { $auth, $db } = useNuxtApp();
     if (
-      this.email !== '' &&
-      this.password !== '' &&
-      this.rePassword === this.password &&
-      this.username !== ''      
+      email.value !== '' &&
+      password.value !== '' &&
+      rePassword.value === this.password &&
+      username.value !== ''      
     ) {
-      this.error = false
-      this.errorMsg = ''      
+      error.value = false
+      errorMsg.value = ''                  
             
-      const router = useRouter();         
       const createUser = await createUserWithEmailAndPassword($auth, this.email, this.password)
       const result = await createUser    
       //db
@@ -92,9 +87,9 @@ methods: {
         }
       })    
     return
-}}
-
 }
+
+
 
 </script>
 
@@ -155,9 +150,9 @@ h2 {
   background: #f2f7f6;
   padding: 4px 4px 4px 30px;
   height: 50px;
-  &:focus {
-    outline: none;
-  }
+}
+.input input:focus {
+  outline: none;
 }
 .icon {
   width: 12px;
@@ -197,25 +192,8 @@ h2 {
   background-position: center;
   filter: blur(2px);
 }
-.background:hover {
-  filter: blur(0px);
-}
 .login-register {
   margin-bottom: 32px;
-}
-
-@media screen and (min-width: 1200px) {
-  
-}
-
-@media screen and (max-width: 699px) {
-  
-}
-@media screen and (min-width: 700px) {
-  
-}
-@media screen and (min-width: 800px) {
-  
 }
 @media screen and (min-width: 900px) {
   .form-wrap {
@@ -233,8 +211,5 @@ h2 {
   .background {
     display: initial;
   }
-}
-@media screen and (min-width: 1200px) {
-  
 }
 </style>

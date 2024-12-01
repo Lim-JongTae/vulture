@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { addDoc, collection, getDocs, doc, query, orderBy, deleteDoc, getDoc } from "firebase/firestore";
+import { collection, getDocs, doc, query, orderBy, deleteDoc, limit, startAfter } from "firebase/firestore";
 
 export const useGetCardStore = defineStore('cardStore', () => {
   const blogPosts= ref([])
@@ -10,8 +10,9 @@ export const useGetCardStore = defineStore('cardStore', () => {
   const blogPhotoFileURL= ref(null)
   const blogPhotoPreview= ref(null)    
   const editPost= ref(null)  
-  const blogID = ref(null)
-
+  const blogID = ref(null)  
+  let lastVisible = ref(null)
+  
   function filterBlogPost(id) {
     blogPosts.value = blogPosts.value.filter((post) => post.blogID !== id)
   }
@@ -22,8 +23,12 @@ export const useGetCardStore = defineStore('cardStore', () => {
   const getPost = async () => {
     const { $db } = useNuxtApp();
     try {               
-      const q = query(collection($db, 'blogPosts'),orderBy('date', 'desc'));      
-      const dbResults = await getDocs(q);
+      const first = query(collection($db, "blogPosts"),orderBy("date", "desc"), limit(4));            
+      const documentSnapshots = await getDocs(first);  
+      
+      lastVisible.value = documentSnapshots.docs[documentSnapshots.docs.length - 1];
+      // console.log("last first", lastVisible.value);      
+      const dbResults = documentSnapshots;  // Fetch more documents as needed
       
       dbResults.forEach((doc) => {        
         if (!blogPosts.value.some((post) => post.blogID === doc.id)) {          
@@ -36,19 +41,53 @@ export const useGetCardStore = defineStore('cardStore', () => {
             blogCoverPhotoName: doc.data().blogCoverPhotoName,
             blogPhotoFileURL: doc.data().blogCoverPhoto,
           };          
-          blogPosts.value.push(data);          
+          blogPosts.value.push(data);                           
         }
       });  
+      
       postLoaded.value = true;
-      console.log('Final blogPosts:', blogPosts.value);
+      // console.log('Final blogPosts:', blogPosts.value);
     } 
     catch (error) {
       console.log("Error fetching posts:", error);
     }
   }
-  const blogPostsCards = computed(() => {
-    return blogPosts.value.slice(0, blogPosts.value.length)
-  })
+  const getNext = async () => {
+    const { $db } = useNuxtApp();
+    try {      
+      const next = query(collection($db, "blogPosts"),
+        orderBy("date", "desc"),
+        startAfter(lastVisible.value),
+        limit(4));
+        const dbResults = await getDocs(next);  // Fetch more documents as needed
+        // console.log("last next", lastVisible.value);  
+      dbResults.forEach((doc) => {        
+        if (!blogPosts.value.some((post) => post.blogID === doc.id)) {          
+          const data = {
+            blogID: doc.id,  // Use doc.id for the document ID
+            blogHTML: doc.data().blogHTML,
+            blogCoverPhoto: doc.data().blogCoverPhoto,
+            blogTitle: doc.data().blogTitle,
+            blogDate: doc.data().date,
+            blogCoverPhotoName: doc.data().blogCoverPhotoName,
+            blogPhotoFileURL: doc.data().blogCoverPhoto,
+          };          
+          blogPosts.value.push(data);         
+        }
+      });  
+      lastVisible.value = dbResults.docs[dbResults.docs.length - 1];                 
+      
+      postLoaded.value = true;
+      // console.log('Final blogPosts:', blogPosts.value);
+    } 
+    catch (error) {
+      console.log("Error fetching posts:", error);
+    }
+  }
+  
+  // const blogPostsCards = computed(() => {
+  //   return blogPosts.value.slice(0, blogPosts.value.length)
+  // })
   const toggleEditPost = (payload) =>   {
     editPost.value = payload
   }
@@ -83,8 +122,7 @@ export const useGetCardStore = defineStore('cardStore', () => {
   function getOnePost(id) {
     console.log('id', id)
     return blogPosts.value.filter((post) => post.blogID === id)
-  }
- 
+  } 
   return { 
     getPost,   
     blogID,  
@@ -96,7 +134,7 @@ export const useGetCardStore = defineStore('cardStore', () => {
     blogPhotoName, 
     editPost,    
     blogPhotoPreview,
-    blogPostsCards,
+    // blogPostsCards,
     toggleEditPost,
     filterBlogPost,
     deletePost,
@@ -107,7 +145,9 @@ export const useGetCardStore = defineStore('cardStore', () => {
     createFileURL,
     openPhotoPreview,
     updatePost,
-    getOnePost
+    getOnePost,
+    getNext
+   
   }
 })
 
