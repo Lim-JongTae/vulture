@@ -48,6 +48,7 @@ const website = computed(() => {
     return props.data.url.split("https://").pop().split("/")[0] || ""
   } catch (error) {
    console.log(error)
+   return
   }
 })
 const logo = computed(() => {  
@@ -57,17 +58,6 @@ const logo = computed(() => {
 </script>
 
 <style scoped>
-/* @mixin flexbox($ai, $jc) {
-    display: flex;
-    align-items: $ai;
-    justify-content: $jc;
-}
-
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
  .card {
   display: flex;
   justify-content: start;

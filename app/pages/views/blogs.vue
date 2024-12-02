@@ -7,6 +7,9 @@
       </div>
       <BlogCard :post="post" v-for="(post, index) in blogPosts" :key="index" class="mt-6" />
     </div>   
+    <div class="text-center">
+      <UButton class="mt-10" @click="handleClick">더 보기</UButton>
+    </div>
   </div>
 </template>
 <script setup>
@@ -26,9 +29,9 @@ const editPost = computed({
 onBeforeUnmount((() => {
   cardStore.toggleEditPost(false)
 }))
-  
-
-
+const handleClick = () => {
+  cardStore.getNext()
+}
 </script>
 
 <style scoped>

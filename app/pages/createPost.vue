@@ -6,46 +6,46 @@
       <div class="container">
         <div :class="{ invisible: !error }" class="err-message">
           <p><span>{{ errorMsg }}</span></p>
-        </div>
-        <div class="blog-info">
-          <UInput variant="ghost" 
-            class="input h-16" 
-            type="text" 
-            autofocus 
-            placeholder="블로그 제목을 입력하세요" 
-            v-model="blogTitle"
-          />         
-          <div class="flex justify-start items-center">
-            <div class="upload-file">
-              <label for="blog-photo" class="-ml-40 -mb-9">사진선택</label>
-              <input 
-                variant="ghost"    
-                class="input"                
-                type="file"                  
-                accept=".png, .jpg, .jpeg"                 
-                id="blog-photo" 
-                icon="i-heroicons-paper-clip-solid"
-                @change="fileChange"
-              />
-           </div>
-           <div class=" mr-36 relative -mb-4">
-             <UButton
-              id="dis"
-              icon="i-heroicons-eye" 
-              class="preview button" 
-              disabled = disabled
-              :class="buttonClass"
-              @click="openPreview"
-             >
-             사진 미리보기
-            </UButton>                          
-            <div class="file-selector" v-show="cardStore.blogPhotoName">
-              <div>파일 명:</div>
-              <div class="text-align">{{ cardStore.blogPhotoName }}</div>
-            </div>
           </div>
-          </div>          
-        </div>
+          <div class="blog-info">
+            <UInput variant="ghost" 
+              class="input h-16" 
+              type="text" 
+              autofocus 
+              placeholder="블로그 제목을 입력하세요" 
+              v-model="blogTitle"
+            />         
+            <div class="flex justify-start items-center">
+              <div class="upload-file">
+                <label for="blog-photo" class="-ml-40 -mb-9">사진선택</label>
+                <input 
+                  variant="ghost"    
+                  class="input"                
+                  type="file"                  
+                  accept=".png, .jpg, .jpeg"                 
+                  id="blog-photo" 
+                  icon="i-heroicons-paper-clip-solid"
+                  @change="fileChange"
+                />
+            </div>
+            <div class=" mr-36 relative -mb-4">
+              <UButton
+                id="dis"
+                icon="i-heroicons-eye" 
+                class="preview button" 
+                disabled = disabled
+                :class="buttonClass"
+                @click="openPreview"
+              >
+              사진 미리보기
+              </UButton>                          
+              <div class="file-selector" v-show="cardStore.blogPhotoName">
+                <div>파일 명:</div>
+                <div class="text-align">{{ cardStore.blogPhotoName }}</div>
+              </div>
+            </div>
+            </div>          
+          </div>
         <ClientOnly>
           <QuillEditor 
             :options="options" 
@@ -57,7 +57,7 @@
       </div>
       <div class="blog-actions">
         <UButton @click="uploadBlog" class="button">블로그 등록</UButton>
-        <NuxtLink class="link-button" :to="`/detailCard/${blogID}`"><UButton class="mt-8">미리보기</UButton></NuxtLink>
+        <NuxtLink class="link-button" to="/views/blogPreview"><UButton class="mt-8">미리보기</UButton></NuxtLink>
       </div>
      </div>
     <div>      
@@ -147,7 +147,7 @@
     const { $storage, $db } = useNuxtApp()
     if (blogTitle.value.length !== 0 && blogHTML.value.length !== 0) {  
       loading.value = true          
-      if (file.value.name)  {        
+      if (file.value)  {        
         const docRef = ref1($storage, `documents/BlogCoverPhotos/${postStore.blogPhotoName}`)        
         console.log('docref',docRef)
         try {     
