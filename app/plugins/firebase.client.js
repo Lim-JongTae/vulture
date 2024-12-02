@@ -3,6 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from 'firebase/auth'
 import { getStorage } from "firebase/storage";
 import { getFunctions } from "firebase/functions";
+import { getMessaging } from "firebase/messaging";
 
 export default defineNuxtPlugin((nuxtApp) => {  
   const {
@@ -30,6 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
   const auth = getAuth(app);
   const storage = getStorage(app);
   const functions = getFunctions(app); 
+  const messaging = getMessaging(app);
   
   // const timestamp = Timestamp.fromDate(new Date())
 
@@ -39,7 +41,8 @@ export default defineNuxtPlugin((nuxtApp) => {
       db,            
       auth,      
       storage,         
-      functions
+      functions,
+      messaging
     }
   }
 })

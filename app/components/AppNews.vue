@@ -1,5 +1,5 @@
 <template>
-  <div class="card mt-10 flex-st-st flex-col w-[440px] w-cal p-6 gap-5 dark:bg-gray-700 bg-slate-50 box-sh-maker rounded-2xl cursor-pointer" @click="openSite">
+  <div class="card dark:bg-gray-700 bg-slate-50" @click="openSite">
     <NuxtLink :to="data.url" target="_blank">
     <div class="w-auto min-h-full rounded-xl ">
       <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class="w-392 h-[260px] rounded-xl img-edit" />
@@ -28,7 +28,7 @@
         <span class="text-xs text-gray-400 dark:text-gray-50">{{ dayjs(data.publishedAt).format('YYYY-MM-DD HH:mm:ss') }}</span>        
       </div>
     </div>
-  </NuxtLink>
+  </NuxtLink>    
   </div>
 </template>
 
@@ -57,9 +57,31 @@ const logo = computed(() => {
 </script>
 
 <style scoped>
-.w-cla {
-  width: calc(360px-48px);
+/* @mixin flexbox($ai, $jc) {
+    display: flex;
+    align-items: $ai;
+    justify-content: $jc;
 }
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+ .card {
+  display: flex;
+  justify-content: start;
+  align-self: start;
+  flex-direction: column;
+  margin-top: 45px;
+  gap: 15px;
+  padding: 10px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  width: 440px;
+ }
+
 .text-line {
   display: -webkit-box;
   -webkit-line-clamp: 2;

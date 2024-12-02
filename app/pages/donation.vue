@@ -45,7 +45,7 @@
         </p>
       </li>
     </ul>  
-  </section> 
+  </section>   
     </main>
 </template>
 <script>
