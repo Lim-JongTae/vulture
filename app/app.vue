@@ -2,7 +2,8 @@
   <div>
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator />
-    <NuxtLayout>      
+    
+    <NuxtLayout>   
       <NuxtPage />        
     </NuxtLayout>
     <UNotifications />

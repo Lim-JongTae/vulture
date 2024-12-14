@@ -1,6 +1,10 @@
 <template>
-  <div class="home">     
-    <blog-post :post="welcomeScreen" />        
+  <div class="home">         
+    <blog-post :post="welcomeScreen" />     
+    <div class="mt-2 mb-10 sm:mt-10 sm:mb-10 text-center">
+      <NuxtImg  src="notice.png" format="webp" class="mx-auto" size="100vw sm:50vw md:400px"/>
+      <UButton class="mt-2 " @click="handleNotice">독수리학교 / 신청접수하기</UButton>
+    </div> 
     <app-carousel />       
     <blog-post :post="post" v-for="(post, index) in sampleBlogPost" :key="index" />      
     <div class="mt-3"></div>
@@ -25,11 +29,12 @@
             후 원 하 기    
           </UButton>       
       </div>
-    </div>
+    </div>    
   </div>
 </template>
 
 <script setup>
+
 const postStore = usePostStore()
 const cardStore = useGetCardStore()
 
@@ -40,6 +45,10 @@ const { pEmail } = useUsersStore()
 // })
 const handleClick = () => {  
   cardStore.getNext()
+}
+const isOpen = ref(false)
+const handleNotice = () => {
+  navigateTo('/notice')
 }
 </script>
 
