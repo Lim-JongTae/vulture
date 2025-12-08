@@ -33,7 +33,8 @@ const closeModal = () => {
     width: 100%;
     height: 100%;
     top: 0;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
 }
 
 .modal-content {
@@ -43,7 +44,7 @@ const closeModal = () => {
   border-radius: 8px;
   width: 350px;
   padding: 40px 30px;
-  background-color: #fff;
+  background-color: #fff;    
 }
 .modal-content p {
   text-align: center;

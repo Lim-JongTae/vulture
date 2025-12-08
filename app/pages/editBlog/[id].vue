@@ -28,7 +28,7 @@
                 @change="fileChange"
               />
            </div>
-           <div class=" mr-36 relative -mb-4">
+           <div class="mr-36 relative -mb-4">
              <UButton
               id="dis"
               icon="i-heroicons-eye" 
@@ -67,7 +67,7 @@
   </template>
 
 <script setup>  
-  definePageMeta({
+definePageMeta({
   layout: 'create-layout'
 }) 
   import { QuillEditor } from '@vueup/vue-quill'
@@ -144,10 +144,10 @@
   //   cardStore.editPost.value = false
   // })
   const imageHandle = (file, Editor, cursorLocation, resetUploader) => {
-    console.log('imageHandel')
+    // console.log('imageHandel')
     const { $storage } = useNuxtApp()    
     const docRef = ref1($storage, `documents/BlogCoverPhotos/test/${file.name}`)
-    console.log('docrefimgeHandle',docRef)
+    // console.log('docrefimgeHandle',docRef)
     uploadBytes(docRef, file).then((snapshot) => {          
       console.Console('snapshot',snapshot)
       },      
@@ -162,7 +162,7 @@
   }
    const updateBlog = async (id, updates)=> {        
     const { $storage, $db } = useNuxtApp()
-    const dataBase = await doc($db, 'blogPosts', routeID.value)    
+    const dataBase = doc($db, 'blogPosts', routeID.value)    
     if (blogTitle.value.length !== 0 && blogHTML.value.length !== 0) {  
       if (file.value)  {        
         loading.value = true          
@@ -176,7 +176,7 @@
                 
           // const dataBase = doc(collection($db, 'blogPosts'))
           const dataBase = doc(collection($db, 'blogPosts'))
-          console.log('dataBase',dataBase)          
+          // console.log('dataBase',dataBase)          
           await setDoc(dataBase, {
             blogID: dataBase.id,            
             blogHTML: blogHTML.value,
@@ -200,19 +200,19 @@
         blogHTML: blogHTML.value,
         blogTitle: blogTitle.value       
       })
-      await cardStore.updatePost(routeID)
-      loading.value = false     
+      await cardStore.updatePost(routeID)         
       toast.add ({
             title: "블로그를 성공적으로 수정하였습니다.",
             color: "green",
             background: "black",
-            timeout: 2500,
+            timeout: 3000,
             callback: () => {
-              navigateTo("/views/blogs")               
+              navigateTo("/views/blogs/")               
             }
           })     
+      loading.value = false  
       reloadNuxtApp({
-        path: "/views/blogs",
+        path: "/views/blogs/",
         persistState: true
       })
       return

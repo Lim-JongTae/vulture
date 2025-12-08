@@ -15,13 +15,13 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'create-layout'
+})
  const postStore = usePostStore()  
  const cardStore = useGetCardStore()
  const route = useRoute()
 
- definePageMeta({
- layout: 'create-layout'
- })
 const currentBlog = ref(null)
 const id = ref(route.params.id )
  onMounted(async() => {

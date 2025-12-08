@@ -10,8 +10,8 @@
         </div>
         <div class="col">
           <h3>Office <div class="underline"><span></span></div></h3>
-          <p>울산광역시 <br />남구 월평로<br/> 91(신정동)</p>
-          <P>녹색에너지</P>
+          <p>울산광역시 <br />남구 삼산로67번길<br/>27-1</p>
+          <p>녹색에너지포럼</p>
           
           <h4>052-227-4111</h4>
         </div>
@@ -29,14 +29,15 @@
           <h3>NewsLetter <div class="underline"><span></span></div></h3>
           <div class="form1">
             <MdiIcon icon="mdiMail" size="1.2rem" class="mr-3" />
-            <span class="mr-3">noksek@hanmail.net</span>
+            <!-- <span class="mr-3">noksek@hanmail.net</span> -->
+            <a href="mailto:noksek@hanmail.com" class="mr-3 decoration-sky-500 hover:text-sky-500">noksek@hanmail.net</a>
             <MdiIcon icon="mdiArrowRight" size="1.2rem" />
-          </div>
+          </div>          
           <div class="social-icons">
-            <li><NuxtLink href="#"><MdiIcon icon="mdiYoutube" class="icon" /></NuxtLink></li>
-            <li><NuxtLink href="#"><MdiIcon icon="mdiTwitter" class="icon" /></NuxtLink></li>
-            <li><NuxtLink href="#"><MdiIcon icon="mdiInstagram" class="icon" /></NuxtLink></li>
-            <li><NuxtLink href="#"><MdiIcon icon="mdiLinkedin" class="icon" /></NuxtLink></li>
+            <a><NuxtLink href="#"><MdiIcon icon="mdiYoutube" class="icon" /></NuxtLink></a>
+            <a><NuxtLink href="#"><MdiIcon icon="mdiTwitter" class="icon" /></NuxtLink></a>
+            <a><NuxtLink href="#"><MdiIcon icon="mdiInstagram" class="icon" /></NuxtLink></a>
+            <a><NuxtLink href="#"><MdiIcon icon="mdiLinkedin" class="icon" /></NuxtLink></a>
           </div>
         </div>
       </div>
@@ -47,7 +48,7 @@
 </template>
 
 <script setup>
-const isYear = ref(null)
+// const isYear = ref(null)
 const useStore = useUsersStore()
 const { pEmail, pAdmin } =storeToRefs(useStore)
 </script>
@@ -167,6 +168,7 @@ ul li .link {
   left: 10px;
   animation: moving 2s linear infinite;
  }
+ 
  @keyframes moving {
   0%{
     left: -20px;

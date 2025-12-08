@@ -16,6 +16,7 @@
             <NuxtLink class="forgot-link-to" to="/auth/forgotPassword">비밀번호를 잃어버렸습니까?</NuxtLink>            
           </div>
           <UButton type="submit" size="x-large" color="#7494ec" rounded="lg" class="btn login-btn -mt-2"><span class="mx-auto">로그인</span></UButton>
+          <p v-if="errorMsg">{{ errorMsg }}</p>
           <p class="text-p">울산독수리와 함께~~</p>
           <div class="social-icons">
             <NuxtLink class="link1" to="#" target="_blank"><UIcon class="input-box-icon" name="i-mdi-google"></UIcon></NuxtLink>
@@ -74,6 +75,7 @@ const displayName = ref('');
 const email = ref('');
 const password = ref('');
 const repassword = ref('');
+const errorMsg = ref('')
 // const { $auth } = useNuxtApp()
 const isActive = ref(false);
 
@@ -87,7 +89,7 @@ const handleRegSubmit = async () => {
       alert('빈칸을 확인해 주세요.');
       return;
     }
-    console.log(displayName.value, email.value, password.value)   
+    // console.log(displayName.value, email.value, password.value)   
     await authStore.register(email.value, password.value, displayName.value)   
     toast.add({
       title: "성공적으로 회원가입 되었습니다.",
@@ -120,12 +122,12 @@ const handleLoginSubmit = async () => {
 }
   catch (error) {       
     console.log(error)
+    errorMsg.value = error.message;
   }
 }
 </script>
 
 <style scoped>
-
 .top {
   display: flex;
   justify-content: center;

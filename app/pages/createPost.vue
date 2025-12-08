@@ -55,9 +55,9 @@
           />      
         </ClientOnly>
       </div>
-      <div class="blog-actions">
+      <div class="blog-actions flex justify-center">
         <UButton @click="uploadBlog" class="button">블로그 등록</UButton>
-        <NuxtLink class="link-button" to="/views/blogPreview"><UButton class="mt-8">미리보기</UButton></NuxtLink>
+        <!-- <NuxtLink class="link-button" to="/views/blogPreview"><UButton class="mt-8">미리보기</UButton></NuxtLink> -->
       </div>
      </div>
     <div>      
@@ -130,7 +130,7 @@
     console.log('imageHandel')
     const { $storage } = useNuxtApp()    
     const docRef = ref1($storage, `documents/BlogCoverPhotos/${file.name}`)
-    console.log('docrefimgeHandle',docRef)
+    // console.log('docrefimgeHandle',docRef)
     uploadBytes(docRef, file).then((snapshot) => {          
           console.log('snapshot',snapshot)                                     
       },      
@@ -152,13 +152,11 @@
         console.log('docref',docRef)
         try {     
           const snapshot = await uploadBytes(docRef, file.value)
-          console.log('snapshot',snapshot)
+          // console.log('snapshot',snapshot)
           const downloadURL = await getDownloadURL(snapshot.ref) 
           const timestamp = Date.now()
-                
-          // const dataBase = doc(collection($db, 'blogPosts'))
           const dataBase = doc(collection($db, 'blogPosts'))
-          console.log('dataBase',dataBase)          
+          // console.log('dataBase',dataBase)          
           await setDoc(dataBase, {
             blogID: dataBase.id,            
             blogHTML: blogHTML.value,
@@ -168,7 +166,7 @@
             profileId: pId.value,
             date: timestamp 
           })                 
-          console.log('documebnt', dataBase)    
+          // console.log('documebnt', dataBase)    
           await cardStore.getPost()
           loading.value = false          
           toast.add({
@@ -230,7 +228,6 @@
     },
     set(value) {
       cardStore.newBlogPost(value)
-      console.log(value)
     }
   })  
   const fileChange = (event) => {         
@@ -287,7 +284,7 @@ button, .link-button  {
   padding: 10px 25px 60px;
 }
 .invisible {
-  opacity: 0.8 !important;  
+  opacity: 0 !important;  
 }
 .err-message {
   width: 100%;

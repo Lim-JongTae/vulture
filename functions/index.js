@@ -16,15 +16,17 @@ const logger = require("firebase-functions/logger");
     // });
 const {onCall} = require("firebase-functions/v2/https");
 const {onDocumentWritten} = require("firebase-functions/v2/firestore");
-import { httpsCallable } from 'firebase/functions';
-// import { functions } from "firebase/functions";
+// import { httpsCallable } from 'firebase/functions';
 
-const functions = require('firebase-functions')
+
+const functions = require('firebase-functions/v1')
 const admin = require('firebase-admin')
 admin.initializeApp()
-const { $functions } = useNuxtApp()
+const db = admin.firestore();
 
-exports.addAdminRole = $functions.https.onCall((data, context) => {
+// const { $functions } = useNuxtApp()
+
+exports.addAdminRole = functions.https.onCall((data, context) => {
     return admin
     .auth()
     .getUserByEmail(data.email)
@@ -40,3 +42,20 @@ exports.addAdminRole = $functions.https.onCall((data, context) => {
         console.log(err)
     })
 })
+
+
+
+// 사용자 생성 시 트리거되는 함수
+exports.incrementUserCount = functions.auth.user().onCreate(async (user) => {
+  
+  const userCountRef = db.collection('metrics').doc('userCount');
+  await db.runTransaction(async (transaction) => {
+    const doc = await transaction.get(userCountRef);
+    if (!doc.exists) {
+      transaction.set(userCountRef, { count: 1 });
+    } else {
+      const newCount = doc.data().count + 1;
+      transaction.update(userCountRef, { count: newCount });
+    }
+  });
+});

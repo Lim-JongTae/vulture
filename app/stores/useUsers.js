@@ -46,6 +46,7 @@ export const useUsersStore = defineStore('useStore',{
         console.log(error)
       }
   },
+
   getters: {   
     userId () {
       return this.pId      
@@ -54,4 +55,5 @@ export const useUsersStore = defineStore('useStore',{
       return this.pAdmin
     }
   }
+
 })

@@ -123,7 +123,7 @@ p {
     flex: 4;
   }
 }
-@media screen and (max-width: 400px) {  
+@media screen and (max-width: 600px) {  
 .blog-photo {
     padding: 0 0;
     order: 1;

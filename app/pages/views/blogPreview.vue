@@ -9,10 +9,10 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'create-layout' 
+})
 const cardStore = useGetCardStore()
-  definePageMeta({
-    layout: 'create-layout' 
-  })
   
   const blogTitle = computed(() => {
     return cardStore.blogTitle

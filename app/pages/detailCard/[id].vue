@@ -13,10 +13,11 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'create-layout'
+})
   const route = useRoute()
-  definePageMeta({
-    layout: 'create-layout'
-  })
+
   const data = ref(null)
   const cardStore = useGetCardStore()
   onMounted(async() => {
@@ -38,10 +39,17 @@
   padding: 20px;
   text-align: left;
 }
+.container img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 5px 5px 5px grey;
+}
 .container h2 {
   position: absolute;
   padding: 0 1rem;
-  top: 5%;
+  top: 8%;
   left: 5%;
   text-align: left;
   font-size: 1.5rem;

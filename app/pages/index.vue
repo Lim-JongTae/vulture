@@ -1,16 +1,23 @@
 <template>
-  <div class="home">         
+  <div class="home">   
     <blog-post :post="welcomeScreen" />     
     <div class="mt-2 mb-10 sm:mt-10 sm:mb-10 text-center">
-      <NuxtImg  src="notice.png" format="webp" class="mx-auto" size="100vw sm:50vw md:400px"/>
-      <UButton class="mt-2 " @click="handleNotice">독수리학교 / 신청접수하기</UButton>
+      <!-- <NuxtImg src="/notice.png" class="mx-auto rounded-2xl shadow-2xl hover:scale-105 transition-all" size="100vw sm:50vw md:600px" /> -->
+      <NuxtLink to="https://forms.gle/zVvgMEkigE8vt5Wv8" target="_blank" >
+        <UButton class="mt-2 font-semibold text-xl" size="lg" @click="handleNotice"><img src="/logo_100.png" alt="" width="22">2026년 독수리학교 접수하기(클릭)</UButton>
+      </NuxtLink>
+      <!-- <NuxtLink to="/survey" target="_blank" >
+        <UButton class="mt-2 font-semibold text-xl" size="lg" @click="handleNotice"><img src="/logo_100.png" alt="" width="22">독수리학교 설문 참여</UButton>
+      </NuxtLink> -->
     </div> 
-    <app-carousel />       
+    <!-- <app-carousel />        -->
     <blog-post :post="post" v-for="(post, index) in sampleBlogPost" :key="index" />      
     <div class="mt-3"></div>
     <div class="blog-card-wrap">
       <div class="container">
-        <h3>최근 블로그 소식</h3>
+      
+        <h3 class="text-black">최근 블로그 소식</h3>
+       
         <div class="blog-cards">
           <blog-card :post="post" v-for="(post, index) in cardStore.blogPosts" :key="index" />
         </div>
@@ -29,7 +36,7 @@
             후 원 하 기    
           </UButton>       
       </div>
-    </div>    
+    </div>
   </div>
 </template>
 
@@ -38,6 +45,7 @@
 const postStore = usePostStore()
 const cardStore = useGetCardStore()
 
+const listUsersResult = ref(null)
 const { sampleBlogPost, welcomeScreen } = storeToRefs(postStore)
 const { pEmail } = useUsersStore()
 // const blogPostsCards = computed(() => {
@@ -47,14 +55,22 @@ const handleClick = () => {
   cardStore.getNext()
 }
 const isOpen = ref(false)
+
 const handleNotice = () => {
-  navigateTo('/notice')
+  alert('감사합니다. 독수리학교 접수를 시작합니다.')
 }
+
 </script>
 
 <style scoped>
-.blog-card-wrap h3 {
+/* .blog-card-wrap h3 {
   @apply text-xl font-semibold mb-8;
+} */
+.blog-card-wrap h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
 }
 h2 {
   font-weight: bold;
@@ -68,12 +84,16 @@ h2 {
 
 @media screen and (max-width: 799px) { 
   .updates h2 {
-    @apply text-start text-xl
+    text-align: start;
+    font-size: 1.25rem; /* text-xl */
+    line-height: 1.75rem
   } 
 }
 @media screen and (min-width: 800px) {
   .updates h2 {
-    @apply text-start text-4xl
+    text-align: start;
+    font-size: 2.25rem; /* text-4xl */
+    line-height: 2.5rem;
   } 
 }
 @media screen and (max-width: 640px) { 

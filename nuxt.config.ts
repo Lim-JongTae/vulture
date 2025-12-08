@@ -45,16 +45,18 @@ export default defineNuxtConfig({
       messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
       appId: process.env.FIREBASE_APP_ID,
       measurementId: process.env.FIREBASE_MEASUREMENT_ID,
-      vapiKey: process.env.FIREBASE_MESSAGE_KEY
+      vapiKey: process.env.FIREBASE_MESSAGE_KEY,
+      spreadsheetUrl: process.env.SHEET_URL 
     }
    },
   modules: [
    '@nuxt/ui',
    '@nuxt/image',
-   '@pinia/nuxt',
-   'nuxt-mdi',
+   '@pinia/nuxt',   
    '@nuxt/fonts',
    '@nuxtjs/color-mode', 
+   'nuxt-mdi',
+   'nuxt-icon'
   ],  
   css: [
     '~/assets/css/global.css', '~/assets/css/tailwind.css',   

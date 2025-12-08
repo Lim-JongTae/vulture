@@ -1,14 +1,18 @@
 <template>
   <div class="container">
-    <video class="slider" src="/movie/fly.mp4" autoplay controls></video>
+    <video class="slider" src="/movie/fly.mp4" autoplay controls></video>    
+    <!-- https://drive.google.com/file/d/1OgYNj6X-Hl7lsPklGrSQwfYws04FWPJ9/view?usp=sharing -->
     <ul>
       <li @click="videoslider('/movie/food_1.mp4')"><video src="/movie/food_1.mp4"></video></li>
       <li @click="videoslider('/movie/food_2.mp4')"><video src="/movie/food_2.mp4"></video></li>
       <li @click="videoslider('/movie/food_3.mp4')"><video src="/movie/food_3.mp4"></video></li>
     </ul>
   </div>
+  <!-- <iframe src="https://drive.google.com/file/d/1OgYNj6X-Hl7lsPklGrSQwfYws04FWPJ9/preview" 
+  width="640" height="480" allow="autoplay"></iframe> -->
+  <!-- https://drive.google.com/file/d/1OgYNj6X-Hl7lsPklGrSQwfYws04FWPJ9/view?usp=sharing -->
+  
 </template>
-
 <script setup>
 function videoslider(links) {
   document.querySelector('.slider').src = links

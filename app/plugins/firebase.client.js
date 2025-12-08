@@ -1,4 +1,4 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp, getApp, getApps } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from 'firebase/auth'
 import { getStorage } from "firebase/storage";
@@ -24,7 +24,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     measurementId
   };  
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
   // initUser();
 
   const db = getFirestore(app);

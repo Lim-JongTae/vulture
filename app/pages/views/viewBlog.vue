@@ -11,12 +11,12 @@
 </template>
 
 <script setup>
+definePageMeta({
+  layout: 'create-layout'
+})
  const postStore = usePostStore()  
  const route = useRoute()
 
- definePageMeta({
- layout: 'create-layout'
- })
 const currentBlog = ref(null)
 const index = ref(route.params.id - 1)
  onMounted(async() => {

@@ -1,7 +1,6 @@
 <template>
   <div>                
-    <AppNavNew />    
-    
+    <AppNavNew />        
     <main>
       <slot />            
     </main>  

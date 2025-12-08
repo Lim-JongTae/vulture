@@ -35,7 +35,7 @@ const editPost = computed(() => {
   return cardStore.editPost
 })
 const editBlog = () => {  
-  console.log('editBlog', props.post.blogID)
+  // console.log('editBlog', props.post.blogID)
   router.push(`/editBlog/${props.post.blogID}`)
 }
 

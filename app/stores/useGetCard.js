@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { collection, getDocs, doc, query, orderBy, deleteDoc, limit, startAfter } from "firebase/firestore";
+import { collection, getDocs, doc, query, orderBy, deleteDoc, limit, startAfter, getDoc } from "firebase/firestore";
 
 export const useGetCardStore = defineStore('cardStore', () => {
   const blogPosts= ref([])
@@ -12,7 +12,8 @@ export const useGetCardStore = defineStore('cardStore', () => {
   const editPost= ref(null)  
   const blogID = ref(null)  
   let lastVisible = ref(null)
-  
+  let userCount = ref(0)
+
   function filterBlogPost(id) {
     blogPosts.value = blogPosts.value.filter((post) => post.blogID !== id)
   }
@@ -88,7 +89,7 @@ export const useGetCardStore = defineStore('cardStore', () => {
   // const blogPostsCards = computed(() => {
   //   return blogPosts.value.slice(0, blogPosts.value.length)
   // })
-  const toggleEditPost = (payload) =>   {
+  const toggleEditPost = (payload) => {
     editPost.value = payload
   }
   const deletePost = async (id) => {
@@ -107,22 +108,37 @@ export const useGetCardStore = defineStore('cardStore', () => {
     blogTitle.value = payload
   }
   function newBlogPost(body) {
-    blogHTML.value = body   
+    blogHTML.value = body       
   }
   function fileNameChange(payload) {
     blogPhotoName.value = payload    
   }
   function createFileURL(payload) {
     blogPhotoFileURL.value = payload
-    console.log('file url',this.blogPhotoFileURL)
+    // console.log('file url',this.blogPhotoFileURL)
   }
   function openPhotoPreview() {
     blogPhotoPreview.value = !this.blogPhotoPreview
   }
   function getOnePost(id) {
-    console.log('id', id)
+    // console.log('id', id)
     return blogPosts.value.filter((post) => post.blogID === id)
-  } 
+  }  
+
+  async function fetchUserCount() {
+  const { $db } = useNuxtApp();
+  try {
+    const userCountDoc = await getDoc(doc($db, 'metrics', 'userCount'));
+    if (userCountDoc.exists()) {
+      userCount.value = userCountDoc.data().count;
+    } else {
+      userCount.value = 0;
+    }
+  } catch (error) {
+    console.error('회원 수 조회 오류:', error);
+  }      
+}
+
   return { 
     getPost,   
     blogID,  
@@ -134,6 +150,7 @@ export const useGetCardStore = defineStore('cardStore', () => {
     blogPhotoName, 
     editPost,    
     blogPhotoPreview,
+    userCount,
     // blogPostsCards,
     toggleEditPost,
     filterBlogPost,
@@ -146,8 +163,8 @@ export const useGetCardStore = defineStore('cardStore', () => {
     openPhotoPreview,
     updatePost,
     getOnePost,
-    getNext
-   
+    getNext,    
+    fetchUserCount
   }
 })
 

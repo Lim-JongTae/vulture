@@ -2,7 +2,7 @@
   <div class="admin">
     <div class="container">        
         <div class="admin-info">
-            <h2>관리자 등록</h2>
+            <h2 class="text-black">관리자 등록</h2>
             <div class="input">
                 <input placeholder="관리자 계정 이메일을 입력하세요!" type="text" id="addAdmins" v-model="adminEmail"/>
             </div>

@@ -14,7 +14,7 @@ const cardStore = useGetCardStore()
 const blogCoverPhoto = computed(()=> {
   return cardStore.blogPhotoFileURL
 })
-console.log(blogCoverPhoto)
+// console.log(blogCoverPhoto)
 
 const closePreview = () => {
   cardStore.openPhotoPreview()

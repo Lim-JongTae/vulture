@@ -279,7 +279,7 @@
       "author": "김근주", 
       "title": "겨울이면 독수리도 찾아오는 울산…'조류 사파리' 운영키로",
       "description": "계절마다 다양한 철새들을 만날 수 있는 지역 특성을 살려 울산시는 조류 사파리를 운영할 계획입니다",
-      "url": "https://www.yna.co.kr/view/MYH20240224005700641",
+      "url": "https://www.yna.co.kr/view/MYH20240224005700641",      
       "urlToImage": "https://cdnvod.yonhapnews.co.kr/yonhapnewsvod/202402/MYH20240224005700641_700M1.mp4",
       "publishedAt": "2024-02-24 12:47",
       "content": "[동영상]떼까마귀의 월동지로 유명한 울산에는 독수리도 수천킬로미터를 날아와 겨울을 나고 있습니다."
@@ -382,7 +382,106 @@
     "urlToImage": "https://img4.yna.co.kr/photo/yna/YH/2024/11/19/PYH2024111917960005700_P4.jpg",
     "publishedAt": "2024-11-19 17:21",
     "content": "19일 오후 울산시 울주군 범서읍 입암들에서 월동을 위해 울산을 찾은 까마귀 떼가 관찰됐다. 2024.11.19 [녹색에너지촉진시민포럼 제공" 
-  }    
+  },    
+  {
+    "id": 36, 
+    "name": "연합뉴스", 
+    "author": "최병길 기자",
+    "title": "효성그룹, 김해 화포천습지 겨울철새 먹이주기 지원 물품 기탁",
+    "description": "경남 김해시는 효성그룹에서 화포천습지 생물다양성 보전을 위한 겨울철새 먹이주기 지원사업으로 1천125만원의 물품을 기탁했다고 10일 밝혔다.",
+    "url": "https://www.yna.co.kr/view/AKR20241210106100052?input=ksilbo",
+    "urlToImage": "https://img1.yna.co.kr/etc/inner/KR/2024/12/10/AKR20241210106100052_01_i_P4.jpg",
+    "publishedAt": "2024-12-10 14:54",
+    "content": "천연기념물이자 환경부 멸종위기 야생생물 2급으로 지정된 독수리에게는 돼지부산물과 한우 지방을 주 2회 제공하며 큰고니, 큰기러기, 노랑부리저어새 등에게는 볍씨와 채를 썬 고구마를 주 1회 준다." 
+  },    
+  {
+    "id": 37, 
+    "name": "뉴스펭균", 
+    "author": "배진주 기자",
+    "title": "'외면하면 죽을 것 같아서...'탈진한 독수리 목숨 구한 사연",
+    "description": "도시화·공장식 축산 등으로 먹이가 부족해 많은 독수리가 탈진하거나 심지어 목숨을 잃는다.",
+    "url": "https://www.newspenguin.com/news/articleView.html?idxno=18375",
+    "urlToImage": "https://cdn.newspenguin.com/news/photo/202412/18375_53778_382.jpg",
+    "publishedAt": "2024.12.17 16:13",
+    "content": "독수리의 상태가 좋지 않음을 인지한 그는 생태 관련 전문가에게 연락했다." 
+  },
+  {
+    "id": 38, 
+    "name": "뉴스1", 
+    "author": "최창호 기자",
+    "title": "경북 고령 독수리식당 찾은 겨울 진객들의 시끌벅적한 식사",
+    "description": "멸종위기야생생물이자 천연기념물 243-1호인 독수리가 경북 고령군 회천 강변에 있는 독수리식당에서 먹잇감을 먹고 있다. 독수리는 매년 겨울마다 국내를 찾는 맹금류 중 가장 큰 철새다",
+    "url": "https://www.news1.kr/local/daegu-gyeongbuk/5645127",
+    "urlToImage": "https://www.news1.kr/_next/image?url=https%3A%2F%2Fi3n.news1.kr%2Fsystem%2Fphotos%2F2024%2F12%2F28%2F7059524%2Fhigh.jpg&w=1920&q=75",
+    "publishedAt": "2024.12.28 19:08",
+    "content": "멸종위기야생생물 1급이자 천연기념물 243-3호인 참수리 한마리가 경북 고령군 회천 강변에 있는 독수리식당 상공위로 날아가고 있다" 
+  },
+  {
+    "id": 39, 
+    "name": "경상일보", 
+    "author": "신동섭 기자",
+    "title": "태화강에 추락한 독수리 탈진한채 구조",
+    "description": "구·군서 동물사체 적극 수거 독수리들 먹이활동 쉽지 않아,먹이경쟁 밀려 기력저하 추정市 회복하면 자연 방사 예정",
+    "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1018108",
+    "urlToImage": "https://cdn.ksilbo.co.kr/news/photo/202501/1018108_602307_1233.jpg",
+    "publishedAt": "2025.01.10 00:10",
+    "content": "지난 7일 태화강 상공을 비행하다 알 수 없는 이유로 강으로 추락한 뒤 사람에게 구조된 독수리"
+  },
+  {
+    "id": 40, 
+    "name": "경상일보", 
+    "author": "신동섭 기자",
+    "title": "입암들 독수리 삼호숲 온다…“사람은 공격안해",
+    "description": "녹색포럼 등 입암서 먹이주며 보호, 주민들 개발사업 방해 이전 요청 삼호 하중도로 ‘독수리식당’ 옮겨",
+    "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1018450",
+    "urlToImage": "https://cdn.ksilbo.co.kr/news/photo/202501/1018450_602588_3237.jpg",
+    "publishedAt": "2025.01.15 00:10",
+    "content": "겨울을 나기 위해 몽골에서 울산을 찾은 독수리들이 태화강 주변에서 먹이활동을 하고 있다. 김동수기자"
+  },
+  {
+    "id": 41, 
+    "name": "중앙일보", 
+    "author": "이수민 기자",
+    "title": "설에는 철새도 특식 먹는다…파주 '독수리 식당' 가보니",
+    "description": "생태보존회가 이런 특별한 급식소를 운영하게 된 건 천연기념물이자 멸종위기종 2급인 독수리의 개체 수 유지가 어려워지고 있기 때문이다.",
+    "url": "https://www.joongang.co.kr/article/25310403",
+    "urlToImage": "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202501/28/0dd1b0d2-633a-4793-a179-b04bc4615d4a.jpg",
+    "publishedAt": "2025.01.28 05:00",
+    "content": "지난 23일 오전 파주 문산읍 장산리 일대에서 임진강생태보존회와 경기북부야생동물구조관리센터가 지난해 12월 구조한 24-872번 독수리를 재활치료 후 방사했다."
+  },
+  {
+    "id": 42, 
+    "name": "중앙일보", 
+    "author": "김윤호 기자",
+    "title": "한쪽 시력 잃은 울산독수리96호, GPS달고 다시 자연으로",
+    "description": "울산에서 오른쪽 안구에 상처를 입은 상태로 구조된 독수리가 석 달간의 치료를 마치고 한쪽 시력 없이 96번 번호표를 날개에 달고 자연으로 돌아갔다.",
+    "url": "https://www.joongang.co.kr/article/25318624",
+    "urlToImage": "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202503/06/708ae1dc-6329-46d1-9dce-4cfb0f5aa483.jpg",
+    "publishedAt": "2025.03.06 13:55",
+    "content": "울산에서 오른쪽 안구에 상처를 입은 상태로 구조된 독수리가 석 달간의 치료를 마치고 한쪽 시력 없이 자연으로 돌아갔다. 이 독수리가 장애를 극복하고 야생에서 건강하게 생존할 수 있을지 주목된다. 독수리 날개에는 위치추적기가 부착돼어 실시간으로 추적되어 독수리 연구에 도움을 주고 있다."
+  },
+  {
+    "id": 43, 
+    "name": "연합뉴스", 
+    "author": "허광무 기자",
+    "title": "울산 월동 독수리 하루 최대 200마리 관찰…먹이주기 마무리",
+    "description": "먹이 43차례 총 13.7t 제공…체험형 '독수리학교'에 1천697명 참여",
+    "url": "https://www.yna.co.kr/view/AKR20250416167000057",
+    "urlToImage": "https://img7.yna.co.kr/etc/inner/KR/2025/04/16/AKR20250416167000057_02_i_P4.jpg",
+    "publishedAt": "2025.04.17 06:22",
+    "content": "울산시는 녹색에너지촉진시민포럼과 함께 진행한 '2025년 울산 독수리학교 및 먹이터 운영'이 성황리에 마무리됐다고 17일 밝혔다.이 행사는 월동을 위해 울산을 찾은 멸종위기 야생동물 독수리를 보호하고, 그 생태를 배우고 관찰하려는 목적으로 매년 열린다"
+  },
+  {
+    "id": 44, 
+    "name": "경상일보", 
+    "author": "김동수 기자",
+    "title": "울산 찾은 독수리 '겨울나러 왔어요'",
+    "description": "겨울철새인 독수리가 올해도 어김없이 몽골에서 울산을 찾아 겨울을 나고 있다.",
+    "url": "https://www.ksilbo.co.kr/news/articleView.html?idxno=1043466",
+    "urlToImage": "https://cdn.ksilbo.co.kr/news/photo/202512/1043466_625293_1939.jpg",
+    "publishedAt": "2025.12.05 00:00",
+    "content": "4일 남구 삼호섬 인근에서 독수리들이 먹이활동을 하고 있다. 녹색에너지촉진시민포럼은 내년 1월3일부터 멸종위기 2급 독수리의 생태를 학습하는 독수리학교를 개최할 예정이다."
+  }
   ]
  
 

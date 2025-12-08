@@ -58,6 +58,7 @@
                   <NuxtLink to="/views/admin" v-if="pAdmin" class="option">
                     <UIcon name="i-mdi-crown" class="w-6 h-6 text-amber-500" />
                     <p>관리자계정</p>
+                    <p>회원 수:{{ cardStore.userCount }}명</p>
                   </NuxtLink >
                 </div>  
                 <div @click="usersStore.logout" class="option">
@@ -79,18 +80,21 @@
 </template>
 
 <script setup>
-  import { useUsersStore } from '~/stores/useUsers'
-  definePageMeta({
-    layout: 'none-layout'
-  })
+definePageMeta({
+  layout: 'none-layout'
+})
+  import { useUsersStore } from '~/stores/useUsers'  
+  
+ 
   const profileMenu = ref(false)
   const usersStore = useFirebaseAuthStore()
+  const cardStore = useGetCardStore()
   const useStore = useUsersStore()
   const { pEmail, pAdmin, pdisplayName, pInitials } = storeToRefs(useStore)
   const profile = ref(null)
   const user = computed(() => useStore.user) 
   const admin = computed(() => useStore.pAdmin)
-
+  const unShow = ref(false)
   const toggleProfileMenu = (event) => {  
     if (event.target === profile.value)
   profileMenu.value = !profileMenu.value
@@ -106,6 +110,7 @@
   }
   onMounted (() => {    
     showMenu('nav-toggle', 'nav-menu')
+    cardStore.fetchUserCount()    
   })
 </script>
 
