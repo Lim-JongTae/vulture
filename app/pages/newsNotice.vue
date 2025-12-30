@@ -9,21 +9,29 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // const newsStore = useNewsStore()
 // const { news } = storeToRefs(useNewsStore()) 
+import type { NewsItem } from '~~/types/my-types'
+import Id from './detailBlog/[id].vue'
+const { data:newsData, pending, error } = await useFetch<NewsItem[]>('/api/news', {
+  key: 'vulture-news'
+})
+function toIdNumber(id: NewsItem['id']): number {
+  if (typeof id === 'number') return id
+  if (typeof id === 'string') {
+    const n = Number(Id)
+    return Number.isFinite(n) ? n : -1
+  } 
+  return -1
+}
 
-import newsData from './newsData.json'
-
-const result = computed(() => {  
-  return newsData.map(item => item).sort((a, b) => b.id - a.id)
+const result = computed<NewsItem[]>(() => {  
+  const items = newsData.value ??[]
+  return [...items]
+    .sort((a, b) => toIdNumber(b.id) - toIdNumber(a.id))
 })
 
-// const { data: newsData } = await useFetch('newsData.json')
-// const result = computed(() => {
-//   if (!newsData.value) return []
-//   return [...newsData.value].short((a, b) => b.id -a.id)
-// })
 const page = ref(1)  //현재페이지
 const pageSize = ref(6) //페이지당 항목수
 const news = ref(result) //정렬된 전체 뉴스 자료
@@ -33,7 +41,7 @@ const currentNews = computed(() => {
   const start = (page.value - 1) * pageSize.value;
   return news.value.slice(start, start + pageSize.value); // 현재 페이지에 해당하는 뉴스 데이터
 });
-
+console.log('newsData', newsData)
 
 const pageInit =() => {  
   page.value = 1;

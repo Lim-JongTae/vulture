@@ -3,7 +3,7 @@
     <blog-post :post="welcomeScreen" />     
     <div class="mt-2 mb-10 sm:mt-10 sm:mb-10 text-center">
       <!-- <NuxtImg src="/notice.png" class="mx-auto rounded-2xl shadow-2xl hover:scale-105 transition-all" size="100vw sm:50vw md:600px" /> -->
-      <NuxtLink to="https://forms.gle/zVvgMEkigE8vt5Wv8" target="_blank" >
+      <NuxtLink to="https://forms.gle/hhvh7FvVexCHbPJz7" target="_blank" >
         <UButton class="mt-2 font-semibold text-xl" size="lg" @click="handleNotice"><img src="/logo_100.png" alt="" width="22">2026년 독수리학교 접수하기(클릭)</UButton>
       </NuxtLink>
       <!-- <NuxtLink to="/survey" target="_blank" >
